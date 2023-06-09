@@ -4,11 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="input.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
-  <body>
-    <div
-      class="absolute -left-40 h-96 w-1/2 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-900 to-indigo-500"
-    ></div>
-    <h1 class="text-4xl text-center text-red-600">Hello world!</h1>
+  <body class="bg-262B3A">
+    <nav
+      class="h-24 p-5 shadow md:flex md:items-center bg-gray-800 text-white md:justify-between"
+    >
+      <div class="flex justify-between items-center">
+        <span class="text-2xl font-[Poppins] cursor-pointer">
+          <img class="logoFirst h-10 inline" src="Images/ArIntellectLogo.svg" />
+          <p class="text-white inline-flex">ArIntellect</p>
+        </span>
+
+        <span class="text-3xl text-white cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+      <ul
+        style="justify-content: inherit; width: 80%"
+        class="left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transation-all ease-in duration-500"
+      >
+        <li class="mx-4 my-6 md:my-0 p-12 inline-flex">
+          <a
+            href="#"
+            class="text-xl text-white hover:text-cyan-500 duration-500"
+            >About</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0 p-12 inline-flex">
+          <a
+            href="#"
+            class="text-xl text-white hover:text-cyan-500 duration-500"
+            >Services</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0 p-12 inline-flex">
+          <a
+            href="#"
+            class="text-xl text-white hover:text-cyan-500 duration-500"
+            >Projects</a
+          >
+        </li>
+        <li class="ms-4 my-6 md:my-0 p-12 inline-flex">
+          <a
+            href="#"
+            class="text-xl text-white hover:text-cyan-500 duration-500"
+            >Vacancies</a
+          >
+        </li>
+        <button
+          class="contactusbutton mx-4 hover:bg-cyan-500 p-12 py-4 text-white font-medium cursor-pointer"
+        >
+          Contact Us
+        </button>
+      </ul>
+    </nav>
+    <script>
+      function Menu(e) {
+        let list = document.querySelector("ul");
+
+        e.name === "menu-outline"
+          ? ((e.name = "close"),
+            list.classList.add("top-[80px]"),
+            list.classList.add("opacity-100"))
+          : (e.name = "menu-outline"),
+          list.classList.remove("top-[80px]"),
+          list.classList.remove("opacity-0");
+      }
+      // let close = document.getElementsByClassName("close");
+      // close.classList.remove("top-[80px]");
+      // close.classList.remove("opacity-0");
+    </script>
+
+    <!--   To DOOOOOOOOOOO
+    <section class="selection1"></section>
+    <section class="selection2"></section>
+    <section class="selection3"></section>
+    <section class="selection4"></section>
+    +
+    <section class="selection5"></section>
+    <section class="selection6"></section>
+    <section class="selection7"></section> -->
+
+    <footer>
+      <!-- todo footer-->
+    </footer>
   </body>
 </html>
+
+<style>
+  .contactusbutton {
+    background: linear-gradient(
+      97.73deg,
+      #86daa2 0%,
+      #77c4a0 33.33%,
+      #54949b 66.67%,
+      #396d97 100%
+    );
+    inline-size: max-content;
+    border-radius: 6px;
+  }
+</style>
