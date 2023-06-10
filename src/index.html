@@ -78,6 +78,12 @@
           : (e.name = "menu-outline"),
           list.classList.remove("top-[80px]"),
           list.classList.remove("opacity-0");
+
+        if (list.style.display === "block") {
+          list.style.display = "none";
+        } else {
+          list.style.display = "block";
+        }
       }
       // let close = document.getElementsByClassName("close");
       // close.classList.remove("top-[80px]");
