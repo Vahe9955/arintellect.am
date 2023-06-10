@@ -29,31 +29,31 @@
         </span>
       </div>
       <ul
-        style="justify-content: inherit; width: 80%"
-        class="left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transation-all ease-in duration-500"
+        style="justify-content: space-around; width: 100%"
+        class="left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transation-all ease-in duration-500 md:justify-center"
       >
-        <li class="mx-4 my-6 md:my-0 p-12 inline-flex">
+        <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
           <a
             href="#"
             class="text-xl text-white hover:text-cyan-500 duration-500"
             >About</a
           >
         </li>
-        <li class="mx-4 my-6 md:my-0 p-12 inline-flex">
+        <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
           <a
             href="#"
             class="text-xl text-white hover:text-cyan-500 duration-500"
             >Services</a
           >
         </li>
-        <li class="mx-4 my-6 md:my-0 p-12 inline-flex">
+        <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
           <a
             href="#"
             class="text-xl text-white hover:text-cyan-500 duration-500"
             >Projects</a
           >
         </li>
-        <li class="ms-4 my-6 md:my-0 p-12 inline-flex">
+        <li class="li mr-6 ms-4 my-6 md:my-0 p-12 inline-flex">
           <a
             href="#"
             class="text-xl text-white hover:text-cyan-500 duration-500"
@@ -61,7 +61,7 @@
           >
         </li>
         <button
-          class="contactusbutton mx-4 hover:bg-cyan-500 p-12 py-4 text-white font-medium cursor-pointer"
+          class="li mr-6 contactusbutton mx-4 hover:bg-cyan-500 p-12 py-4 text-white font-medium cursor-pointer"
         >
           Contact Us
         </button>
@@ -116,6 +116,12 @@
       #396d97 100%
     );
     inline-size: max-content;
+
     border-radius: 6px;
+  }
+  @media screen and (max-width: 767px) {
+    .li {
+      margin: 0 165px;
+    }
   }
 </style>
