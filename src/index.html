@@ -16,7 +16,8 @@
   </head>
   <body class="bg-262B3A">
     <nav
-      class="h-24 p-5 shadow md:flex md:items-center bg-gray-800 text-white md:justify-between"
+      class="h-24 p-5 shadow md:flex md:items-center bg-262B3A text-white md:justify-between"
+      style="position: relative"
     >
       <div class="flex justify-between items-center">
         <span
@@ -28,7 +29,7 @@
             src="Images/ArIntellectLogo.svg"
             style="height: 77px"
           />
-          <p class="text-white inline-flex">ArIntellect</p>
+          <p class="text-white inline-flex font-segoe-ui">ArIntellect</p>
         </span>
 
         <span class="text-3xl text-white cursor-pointer mx-2 md:hidden block">
@@ -36,48 +37,48 @@
         </span>
       </div>
       <ul
-        style="justify-content: space-around; width: 100%"
+        style="justify-content: space-around; width: 100%; background: #262b3a"
         class="left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transation-all ease-in duration-500 md:justify-center"
       >
         <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
           <a
             href="#"
-            class="text-xl text-white hover:text-cyan-500 duration-500"
+            class="text-xl text-white hover:text-cyan-500 duration-500 font-segoe-ui"
             >About</a
           >
         </li>
         <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
           <a
             href="#"
-            class="text-xl text-white hover:text-cyan-500 duration-500"
+            class="text-xl text-white hover:text-cyan-500 duration-500 font-segoe-ui"
             >Services</a
           >
         </li>
         <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
           <a
             href="#"
-            class="text-xl text-white hover:text-cyan-500 duration-500"
+            class="text-xl text-white hover:text-cyan-500 duration-500 font-segoe-ui"
             >Projects</a
           >
         </li>
         <li class="li mr-6 ms-4 my-6 md:my-0 p-12 inline-flex">
           <a
             href="#"
-            class="text-xl text-white hover:text-cyan-500 duration-500"
+            class="text-xl text-white hover:text-cyan-500 duration-500 font-segoe-ui"
             >Vacancies</a
           >
         </li>
         <button
-          class="li mr-6 contactusbutton mx-4 hover:bg-cyan-500 p-12 py-4 text-white font-medium cursor-pointer"
+          class="li mr-6 contactusbutton mx-4 hover:bg-cyan-500 p-12 py-4 text-white font-medium cursor-pointer font-segoe-ui"
         >
           Contact Us
         </button>
       </ul>
     </nav>
-    <section class="selection1">
+    <section class="section1 h-520px" style="height: 520px;">
       <!-- <div class="fixed h-170 w-840 bg-[#396D97] filter blur-[368px]"></div> -->
       <div
-        class=""
+        class="ellips22"
         style="
           position: fixed;
           height: 240px;
@@ -85,16 +86,52 @@
           width: 550;
           background: #396d97;
           opacity: 50%;
-          filter: blur(158px);
+          filter: blur(208px);
         "
       ></div>
       <p
-        class="font-semibold text-6xl leading-tight text-center font-segoe-ui firts-text text-white mx-auto p-10 w-1/2 mt-36"
+        class="font-semibold text-6xl leading-tight text-center  firts-text text-white mx-auto p-10 w-1/2 mt-36 font-segoe-ui"
       >
         Bridging Education,<br />
         Environment, and Digital<br />
         Innovation
       </p>
+    </section>
+    <section class="section2">
+      <div style="position: relative">
+        <div
+          class="ellips22"
+          style="
+            top: 80px;
+            right: 0;
+            height: 240px;
+            width: 500px;
+            width: 550;
+            position: absolute;
+            background: #86daa2;
+            opacity: 50%;
+            filter: blur(188px);
+          "
+        ></div>
+        <div class="about ">
+          <div class="fixed p-28">
+            <p class="p1 font-segoe-ui font-normal  leading-8 text-custom-green max-w-max w-113 h-16  text-3xl" href="#about">ABOUT US</p>
+
+            <p class="p2 text-white max-w-max  font-segoe-ui" style="font-size:50px">
+              Your Trusted Partner in<br />
+              The Digital World
+            </p>
+          </div>
+          <div class="animation"
+           style="width: 877px;
+          height: 510px;
+          right: 0px;
+          border: 3px solid #73AD21;
+          position: absolute;">
+
+          </div>
+      </div>
+
 
       <!-- <div class="about">
           <div>
@@ -130,7 +167,8 @@
         e.name === "menu-outline"
           ? ((e.name = "close"),
             list.classList.add("top-[80px]"),
-            list.classList.add("opacity-100"))
+            list.classList.add("opacity-100")) &&
+            list.classList.toggle("section-1")
           : (e.name = "menu-outline"),
           list.classList.remove("top-[80px]"),
           list.classList.remove("opacity-0");
