@@ -1,350 +1,318 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="input.css" rel="stylesheet" />
-    <link href="/src/Fonts/SegoeUi.css" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </head>
-  <body class="bg-262B3A">
-    <nav
-      class="h-24 p-5 shadow md:flex md:items-center bg-gray-900 text-white md:justify-between "
-      style="position: relative"
-    >
-      <div class="flex justify-between items-center">
-        <span
-          class="text-2xl font-[Poppins] cursor-pointer"
-          style="inline-size: max-content; padding: 20px"
-        >
-          <img
-            class="logoFirst h-10 inline"
-            src="Images/ArIntellectLogo.svg"
-            style="height: 77px"
-          />
-          <p class="text-white inline-flex font-segoe-ui">ArIntellect</p>
-        </span>
-
-        <span class="text-3xl text-white cursor-pointer mx-2 md:hidden block">
-          <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
-        </span>
-      </div>
-      <ul
-        style="justify-content: space-around; width: 100%;"
-        class="bg-gray-900 left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 h-24 pl-7 md:opacity-100 opacity-0 top-[-400px] transation-all ease-in duration-500 md:justify-center"
-      >
-        <li class="li  mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
-          <a
-            href="#"
-            class="text-xl text-white hover:text-cyan-500 duration-500 font-segoe-ui"
-            >About</a
+    <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    </style>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link href="input.css" rel="stylesheet" />
+          <link href="/src/Fonts/fonts.css" rel="stylesheet"/>
+          <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
+          <script src="https://cdn.tailwindcss.com"></script>
+          <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+          ></script>
+          <style>
+            @import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+            </style>
+          <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+          ></script>
+        </head>
+        <body class="bg-262B3A">
+          <nav
+            class="h-24 p-5 shadow md:flex md:items-center bg-gray-900 text-white md:justify-between "
+            style="position: relative"
           >
-        </li>
-        <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
-          <a
-            href="#"
-            class="text-xl text-white hover:text-cyan-500 duration-500 font-segoe-ui"
-            >Services</a
-          >
-        </li>
-        <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
-          <a
-            href="#"
-            class="text-xl text-white hover:text-cyan-500 duration-500 font-segoe-ui"
-            >Projects</a
-          >
-        </li>
-        <li class="li mr-6 ms-4 my-6 md:my-0 p-12 inline-flex">
-          <a
-            href="#"
-            class="text-xl text-white hover:text-cyan-500 duration-500 font-segoe-ui"
-            >Vacancies</a
-          >
-        </li>
-        <button
-          class="li mr-6 contactusbutton mx-4 hover:bg-cyan-500 p-12 py-4 text-white font-medium cursor-pointer font-segoe-ui"
-        >
-          Contact Us
-        </button>
-      </ul>
-    </nav>
-    <section class="section1 h-520px" style="height: 520px;">
-      <!-- <div class="fixed h-170 w-840 bg-[#396D97] filter blur-[368px]"></div> -->
-      <div
-        class="ellips22"
-        style="
-          position: absolute;
-          height: 240px;
-          width: 500px;
-          width: 550;
-          background: #396d97;
-          opacity: 50%;
-          filter: blur(208px);
-        "
-      ></div>
-      <p
-        class="font-semibold text-6xl leading-tight text-center  firts-text text-white mx-auto p-10 w-1/2 mt-36 font-segoe-ui"
-      >
-        Bridging Education,<br />
-        Environment, and Digital<br />
-        Innovation
-      </p>
-    </section>
-    <section class="section2"  style="height:520px;">
-      <div style="position: relative">
-        <div
-          class="ellips22"
-          style="
-            top: 80px;
-            right: 0;
-            height: 240px;
-            width: 500px;
-            width: 550;
-            position: absolute;
-            background: #86daa2;
-            opacity: 50%;
-            filter: blur(188px);
-          "
-        ></div>
-        <div class="about ">
-          <div class=" p-44 absolute">
-            <p class="p1 font-segoe-ui font-normal  leading-8 text-custom-green max-w-max w-113 h-16  text-3xl" href="#about">ABOUT US</p>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-2xl font-[Poppins]  cursor-pointer p-24"
+                style="inline-size: max-content; "
+              >
+                <img
+                  class="logoFirst h-10 inline "
+                  src="Images/ArIntellectLogo.svg"
+                  style="height: 77px"
+                />
+                <p class="text-white inline-flex font-sans">ArIntellect</p>
+              </span>
 
-<p class="p2 text-white max-w-max  font-segoe-ui" style="font-size:50px">
-              Your Trusted Partner in<br />
-              The Digital World
-            </p>
-            <p class="about-text text-white font-segoe-uis">
-              We are driven by a passion for technology and a commitment to<br />
-              excellence. With a deep understanding of the ever-evolving IT<br />
-              landscape, we deliver innovative and customized solutions to help<br />
-              businesses harness the power of technology and achieve their goals.
-            </p>
-          </div>
-          <div class="animation"
-           style="width: 877px;
-          height: 510px;
-          right: 0px;
-          border: 3px solid #73AD21;
-          position: absolute;">
-
-          </div>
-      </div>
-    </section>
-
-<section class="section3 mt-52" style="height:520px;">
-
-  <div class="section-3 mx-auto">
-        <div class="text-center">
-            <p class=" font-segoe-ui text-custom-green leading-10 uppercase">
-                SERVICES
-            </p>
-
-            <p class="text-5xl leading-14 capitalize font-segoe-ui text-white">
-                What We Do
-            </p>
-        </div>
-        <div class=" flex mt-16  gap-5 justify-center ">
-
-            <div class="sm:w-1/2 md:w-1/2 lg:w-1/5 p-4 w-64 h-64 bg-gray-900">
-                <img src="Images/rectangle-1.svg" class="w-12 h-12" />
-                <p class="font-normal text-white mt-4 font-segoe-ui "> Web & Mobile App <br /> Development</p>
-                <p class="font-normal text-white mt-2 font-segoe-ui">We create exceptional digital<br /> experiences for web and mobile<br /> platforms.</p>
+              <span class="text-3xl text-white cursor-pointer mx-2 md:hidden block">
+                <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+              </span>
             </div>
+            <ul
+              style="justify-content: space-around; width: 100%;"
+              class="bg-gray-900 left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 h-24 pl-7 md:opacity-100 opacity-0 top-[-400px] transation-all ease-in duration-500 md:justify-center"
+            >
+              <li class="li  mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
+                <a
+                  href="#about-link"
+                  class="text-xl text-white hover:text-cyan-500 duration-500 font-sans"
+                  onclick="scrollToSection('about-link')">About</a
+                >
+              </li>
+              <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
+                <a
+                  href="#services-link"
+                  onclick="scrollToSection('services-link')"
+                  class="text-xl text-white hover:text-cyan-500 duration-500 font-sans"
+                  >Services</a
+                >
+              </li>
+              <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
+                <a
+                  href="#projects-link"
+                  onclick="scrollToSection('projects-link')"
+                  class="text-xl text-white hover:text-cyan-500 duration-500 font-sans"
+                  >Projects</a
+                >
+              </li>
+              <li class="li mr-6 ms-4 my-6 md:my-0 p-24 inline-flex">
+                <a
+                  href="#"
+                  class="text-xl text-white hover:text-cyan-500 duration-500 font-sans"
+                  >Vacancies</a
+                >
+              </li>
+              <button
+              href="#contactus-link"
+              onclick="scrollToSection('contactus-link')"
+                class="li mr-6 contactusbutton mx-4 hover:bg-cyan-500 p-12 py-4 text-white font-medium cursor-pointer font-sans"
+              >
+                Contact Us
+              </button>
+            </ul>
+          </nav>
+          <section  class="section1 h-520px" style="height: 520px;">
+            <!-- <div class="fixed h-170 w-840 bg-[#396D97] filter blur-[368px]"></div> -->
+            <div
+              class="ellips22"
+              style="
+                position: absolute;
+                height: 240px;
+                width: 500px;
+                width: 550;
+                background: #396d97;
+                opacity: 50%;
+                filter: blur(208px);
+              "
+            ></div>
+            <p
+              class="font-semibold text-6xl leading-tight text-center  firts-text text-white mx-auto p-10 w-1/2 mt-36 font-sans"
+            >
+              Bridging Education,<br />
+              Environment, and Digital<br />
+              Innovation
+            </p>
+          </section>
+          <section id="about-link" class="section2"  style="height:520px;">
+            <div style="position: relative">
+              <div
+                class="ellips22"
+                style="
+                  top: 80px;
+                  right: 0;
+                  height: 240px;
+                  width: 500px;
+                  width: 550;
+                  position: absolute;
+                  background: #86daa2;
+                  opacity: 50%;
+                  filter: blur(188px);
+                "
+              ></div>
+              <div class="about ">
+                <div class=" p-44 absolute">
+                  <p class="p1 font-sans font-normal  leading-8 text-custom-green max-w-max w-113 h-16  text-3xl" href="#about">ABOUT US</p>
 
-            <div class="sm:w-1/2 md:w-1/2 lg:w-1/5 p-4  w-64 h-64 bg-gray-900" >
-                <img src="Images/rectangle-2.svg" class="w-12 h-12" />
-                <p class="font-normal text-white mt-4 font-segoe-ui"> Business Analytics &<br />Technical Spec. Writing</p>
-                <p class="font-normal text-white mt-2 font-segoe-ui">We deliver data-driven insights<br /> and precise documentation for<br /> successful software development.</p>
+      <p class="p2 text-white max-w-max font-sans  font-bold from-neutral-700 text-5xl" style="font-size:50px ;">
+                    Your Trusted Partner in<br />
+                    The Digital World
+                  </p>
+                  <p class="about-text mt-5 text-white font-sanss">
+                    We are driven by a passion for technology and a commitment to<br />
+                    excellence. With a deep understanding of the ever-evolving IT<br />
+                    landscape, we deliver innovative and customized solutions to help<br />
+                    businesses harness the power of technology and achieve their goals.
+                  </p>
+                </div>
+                <div class="animation"
+                 style="width: 877px;
+                height: 510px;
+                right: 0px;
+                border: 3px solid #73AD21;
+                position: absolute;">
+
+                </div>
             </div>
+          </section>
 
-            <div class="sm:w-1/2 md:w-1/2 lg:w-1/5 p-4 w-64 h-64 bg-gray-900" >
-                <img src="Images/rectangle-3.svg" class="w-12 h-12">
-                <p class="font-normal text-white mt-4 font-segoe-ui" > GIS & Map Powered App<br /> Development</p>
-                <p class="font-normal text-white mt-2 font-segoe-ui">We create GIS-powered apps<br /> that redefine location-based<br />experiences.</p>
-            </div>
+      <section id="services-link" class="section3 mt-52" style="height:520px;">
 
-            <div class="sm:w-1/2 md:w-1/2 lg:w-1/5 p-4 w-64 h-64 bg-gray-900">
-                <img src="Images/rectangle-4.svg" class="w-12 h-12" />
-                <p class="font-normal text-white mt-4 font-segoe-ui"> UI/UX Design</p>
-                <p class="font-normal text-white mt-2 font-segoe-ui"> We build captivating and user-<br />centric interfaces for<br /> unforgettable experiences.</p>
+        <div class="section-3 mx-auto">
+              <div class="text-center">
+                  <p class=" font-sans  text-custom-green leading-10 uppercase">
+                      SERVICES
+                  </p>
+
+                  <p class="text-5xl leading-14 capitalize font-sans text-white">
+                      What We Do
+                  </p>
+              </div>
+              <div class=" flex mt-16  gap-5 justify-center ">
+
+                  <div class="lg:w-1/5 p-4 w-72 h-64 bg-gray-900">
+                    <div class="mt-6 ml-6">
+                      <img src="images/rectangle-1.svg"  />
+                      <p class="font-normal text-white mt-4 font-sans "> Web & Mobile App <br /> Development</p>
+                      <p class="font-normal text-white mt-2 font-sans">We create exceptional digital<br /> experiences for web and mobile<br /> platforms.</p>
+                    </div>
+                    </div>
+
+                  <div class="lg:w-1/5 p-4 w-72 h-64 bg-gray-900">
+                    <div class="mt-6 ml-6">
+                      <img src="images/rectangle-2.svg" class="w-12 h-12" />
+                      <p class="font-normal text-white mt-4 font-sans"> Business Analytics &<br />Technical Spec. Writing</p>
+                      <p class="font-normal text-white mt-2 font-sans">We deliver data-driven insights<br /> and precise documentation for<br /> successful software development.</p>
+                    </div>
+                    </div>
+
+                  <div class="lg:w-1/5 p-4 w-72 h-64 bg-gray-900">
+                    <div class="mt-5 ml-6">
+                      <img src="Images/rectangle-3.svg" class="w-12 h-12">
+                      <p class="font-normal text-white mt-4 font-sans" > GIS & Map Powered App<br /> Development</p>
+                      <p class="font-normal text-white mt-2 font-sans">We create GIS-powered apps<br /> that redefine location-based<br />experiences.</p>
+                    </div>
+                    </div>
+
+                  <div class="lg:w-1/5 p-4 w-72 h-64 bg-gray-900">
+                    <div class="mt-6 ml-6">
+                      <img src="Images/rectangle-4.svg" class="w-12 h-12" />
+                      <p class="font-normal text-white mt-4 font-sans"> UI/UX Design</p>
+                      <p class="font-normal text-white mt-2 font-sans"> We build captivating and user-<br />centric interfaces for<br /> unforgettable experiences.</p>
+                    </div>
+                    </div>
               </div>
         </div>
-  </div>
-</section>
+      </section>
+      <section id="projects-link" class="section4">
+        <div class=" mx-auto" style="height:520px;">
+          <div class="text-center">
+              <p class=" font-sans text-custom-green leading-10 uppercase">
+                  PROJECTS
+              </p>
+              <p class="text-5xl leading-14 capitalize font-sans text-white">
+                  Our Works
+              </p>
+          </div>
+          <div class=" flex mt-16  gap-5 justify-center ">
+            <div class="sm:w-1/2 md:w-1/2 lg:w-1/3 p-4 w-64 h-64 bg-gray-900" style="width: 41.333333%;">
+              <img src="Images/works-p1.svg" class="w-12 h-12" />
+              <p class="font-bold text-white mt-4 font-sans ">Police Operational Management Center Develoment <br /> & Maintenance</p>
+              <p class="font-normal text-white mt-2 font-sans">This is about management from Emergency Call to Duty<br /> Officers operations with Real Time Collaboration</p>
+          </div>
+      
+          <div class="sm:w-1/2 md:w-1/2 lg:w-1/3 p-4  w-64 h-64 bg-gray-900" style="width: 41.333333%;" >
+              <img src="Images/works-p2.svg" class="w-12 h-12" />
+              <p class="font-bold text-white mt-4 font-sans">EcoIntellect Portal</p>
+              <p class="font-normal text-white mt-2 font-sans"> Educational Platform to Learn About Ecology and to Help  <br /> Keep our Environment Clean and Healthy with Gamification Elements</p>
+          </div>
+      </div>
+      </section>
+      <section id="contactus-link" class="section5">
+        <div class="section-5 mx-auto" style="height:520px;">
+          <div class="text-center">
+              <p class=" font-sans text-custom-green leading-10 uppercase">
+                  CONTACT US
+              </p>
+              <p class="text-5xl leading-14 capitalize font-sans text-white">
+                 Get In Touch
+              </p>
+          </div>
+          <div class="flex mt-16  gap-5 justify-evenly sm:w-1/2 md:w-1/2 lg:w-full  w-64 h-64 bg-gray-900 ">
+            <div class="circle-background mt-20 w-20 h-20 bg-blue-400 bg-opacity-40 rounded-full">
+                <img src="Images/Address.svg" class="contactus1 p-4" alt="Address Icon">
+                <p class="font-normal text-center text-white mt-2 font-sans">ADDRESS</p>
+                <div>
+                    <p class="text-center w-max relative right-3 text-white">Tigran Mets 80</p>
+                </div>
+            </div>
+            <div class="circle-background mt-20 w-20 h-20 bg-blue-400 bg-opacity-40 rounded-full">
+                <img src="images/Phone.svg" class="phonesvg p-4" alt="Phone Icon">
+                <p class="text-center  text-white">PHONE</p>
+                <div>
+                    <p class="text-center w-max  relative right-6 text-white">+374 (94) 763 304</p>
+                </div>
+            </div>
+            <div class="circle-background mt-20 w-20 h-20 bg-blue-400 bg-opacity-40 rounded-full">
+                <img src="images/Email.svg" class="emailsvg p-4" alt="Email Icon">
+                <p class="text-center text-white">EMAIL</p>
+                <div class="w-max h-14">
+                    <img src="images/Vector (2).svg" class="emailiksvg w-auto  pt-1 relative right-7" alt="Email Icon">
+                </div>
+            </div>
+          </div>
+       </div>
+      </section>
 
-    <script>
-      function Menu(e) {
-        let list = document.querySelector("ul");
+          
 
-        e.name === "menu-outline"
-          ? ((e.name = "close"),
-            list.classList.add("top-[80px]"),
-            list.classList.add("opacity-100")) &&
-            list.classList.toggle("section-1")
-          : (e.name = "menu-outline"),
-          list.classList.remove("top-[80px]"),
-          list.classList.remove("opacity-0");
+          <footer>
+            <!-- todo footer-->
+          </footer>
+        </body>
+      </html>
 
-        if (list.style.display === "block") {
-          list.style.display = "none";
-        } else {
-          list.style.display = "block";
+      <script>
+        function Menu(e) {
+          let list = document.querySelector("ul");
+
+          e.name === "menu-outline"
+            ? ((e.name = "close"),
+              list.classList.add("top-[80px]"),
+              list.classList.add("opacity-100")) &&
+              list.classList.toggle("section-1")
+            : (e.name = "menu-outline"),
+            list.classList.remove("top-[80px]"),
+            list.classList.remove("opacity-0");
+
+          if (list.style.display === "block") {
+            list.style.display = "none";
+          } else {
+            list.style.display = "block";
+          }
         }
+
+        function scrollToSection(sectionId) {
+const seciotn = document.getElementById(sectionId);
+seciotn.scrollIntoView({ behavior: 'smooth' });
       }
-    </script>
+       
 
-    <footer>
-      <!-- todo footer-->
-    </footer>
-  </body>
-</html>
 
-<style>
-  .contactusbutton {
-    background: linear-gradient(
-      97.73deg,
-      #86daa2 0%,
-      #77c4a0 33.33%,
-      #54949b 66.67%,
-      #396d97 100%
-    );
-    inline-size: max-content;
+      </script>
+      <style>
+        .contactusbutton {
+          background: linear-gradient(
+            97.73deg,
+            #86daa2 0%,
+            #77c4a0 33.33%,
+            #54949b 66.67%,
+            #396d97 100%
+          );
+          inline-size: max-content;
 
-    border-radius: 6px;
-  }
-  @media screen and (max-width: 767px) {
-    .li {
-      margin: 0 165px;
-    }
-  }
-</style>
-
-<!--
-  <div class="section-3 container">
-    <div>
-      <div class="section-title">
-        <p class="section-header">PROJECTS</p>
-
-<p class="section-subheader">Our Works</p>
-        <div class="about-projects">
-          <div class="work-p1">
-            <img src="images/works-p1.svg" class="rectangle-b" />
-            <p
-              class="paragraf-text"
-              style="
-                font-family: 'Segoe UI';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 17px;
-                line-height: 23px;
-                text-transform: capitalize;
-                margin-left: 18px;
-                margin-top: 30px;
-              "
-            >
-              Police Operational Management Center Develoment <br />
-              & Maintenance
-            </p>
-            <p class="rectangls-text" style="margin-left: 18px">
-              This is about management from Emergency Call to Duty<br />
-              Officers operations with Real Time Collaboration
-            </p>
-          </div>
-          <div class="work-p2">
-            <img src="images/works-p2.svg" class="rectangle-b" />
-            <p class="paragraf-text">EcoIntellect Portal</p>
-            <p class="rectangls-text">
-              Educational Platform to Learn About Ecology and to Help <br />
-              Keep our Environment Clean and Healthy with Gamification
-              Elements
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-4 container">
-    <div>
-      <div class="section-title">
-        <p class="section-header">CONTACT US</p>
-
-        <p class="section-subheader">Get In Touch</p>
-      </div>
-      <div class="contactus">
-        <div class="circle-background">
-          <img src="images/Address.svg" class="contactus1" />
-          <p class="address-text">ADDRESS</p>
-          <div>
-            <p class="contactus-text">Tigran Mets 80</p>
-          </div>
-        </div>
-        <div class="circle-background">
-          <img src="images/Phone.svg" class="phonesvg" />
-          <p class="phone-text">PHONE</p>
-          <div>
-            <p class="phone-number">+374 (94) 763 304</p>
-          </div>
-        </div>
-        <div class="circle-background">
-          <img src="images/Email.svg" class="emailsvg" />
-          <p class="email-text">EMAIL</p>
-          <div>
-            <img src="images/emailik.svg" class="emailiksvg" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-5 container">
-    <div>
-      <div class="section-title">
-        <p class="section-header">VACANCIES</p>
-
-        <p class="section-subheader">Join Our Team</p>
-      </div>
-      <div class="vacancies">
-        <p class="vacancies-text">
-          We value a diverse and talented workforce. We seek individuals who p
-          ossess a<br />
-          combination of technical expertise, professional experience, and
-          personal qualities<br />that align with our company values. Please
-          send your resume to
-        </p>
-        <img src="images/ArIntellect.svg" class="arintellect" />
-      </div>
-    </div>
-  </div>
-
-  <div class="section-6 container">
-    <div class="info-container">
-      <p class="info-p1">Company</p>
-
-      <p class="indo-p2">Office</p>
-
-      <p class="indo-p3">Follow</p>
-
-      <div class="info">
-        <img src="images/ArIntellectLogo.svg" class="ar-info" />
-        <p class="info-t1">About<br />Services<br />Contacts</p>
-        <p class="info-t2">
-          Address: Tigran Mets 80<br />Phone: +374 (00) 000 000<br /><img
-            src="~images/emailik.svg"
-          />
-        </p>
-        <p class="info-t3">Facebook<br />Linkedin<br />Twitter</p>
-      </div>
-    </div>
-  </div>
-
-</section> -->
+          border-radius: 6px;
+        }
+        @media screen and (max-width: 797px) {
+          .li {
+            margin: 0 165px;
+          }
+        }
+    </style>

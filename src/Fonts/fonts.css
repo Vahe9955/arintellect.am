@@ -1,0 +1,13 @@
+@layer utilities,base,components,viewport {
+  .font-segoe-ui {
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
+}
+@font-face {
+  font-family: ‘Segoe UI’;
+  src: url(‘SegoeUI-Regular.woff2’) format(‘woff2’),
+    url(‘SegoeUI-Regular.woff’) format(‘woff’);
+  font-weight: normal;
+  font-style: normal;
+}
