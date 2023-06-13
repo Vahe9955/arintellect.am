@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="input.css" rel="stylesheet" />
+    <link href="/src/Fonts/SegoeUi.css" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       type="module"
@@ -16,7 +17,7 @@
   </head>
   <body class="bg-262B3A">
     <nav
-      class="h-24 p-5 shadow md:flex md:items-center bg-262B3A text-white md:justify-between"
+      class="h-24 p-5 shadow md:flex md:items-center bg-gray-900 text-white md:justify-between "
       style="position: relative"
     >
       <div class="flex justify-between items-center">
@@ -37,10 +38,10 @@
         </span>
       </div>
       <ul
-        style="justify-content: space-around; width: 100%; background: #262b3a"
-        class="left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transation-all ease-in duration-500 md:justify-center"
+        style="justify-content: space-around; width: 100%;"
+        class="bg-gray-900 left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 h-24 pl-7 md:opacity-100 opacity-0 top-[-400px] transation-all ease-in duration-500 md:justify-center"
       >
-        <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
+        <li class="li  mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
           <a
             href="#"
             class="text-xl text-white hover:text-cyan-500 duration-500 font-segoe-ui"
@@ -97,7 +98,7 @@
         Innovation
       </p>
     </section>
-    <section class="section2">
+    <section class="section2"  style="height:520px;">
       <div style="position: relative">
         <div
           class="ellips22"
@@ -114,10 +115,10 @@
           "
         ></div>
         <div class="about ">
-          <div class=" p-28 absolute">
+          <div class=" p-44 absolute">
             <p class="p1 font-segoe-ui font-normal  leading-8 text-custom-green max-w-max w-113 h-16  text-3xl" href="#about">ABOUT US</p>
 
-            <p class="p2 text-white max-w-max  font-segoe-ui" style="font-size:50px">
+<p class="p2 text-white max-w-max  font-segoe-ui" style="font-size:50px">
               Your Trusted Partner in<br />
               The Digital World
             </p>
@@ -137,34 +138,48 @@
 
           </div>
       </div>
-
-
-      <!-- <div class="about">
-          <div>
-            <p class="p1 text-white max-w-max" href="#about">ABOUT US</p>
-
-            <p class="p2 text-white max-w-max">
-              Your Trusted Partner in<br />
-              the Digital World
-            </p>
-          </div>
-
-          <div>
-            <img
-              src="images/laptopik.svg"
-              class="w-[876.38px] h-[512.42px] laptop"
-            />
-          </div>
-        </div>
-
-        <p class="about-text text-white max-w-max">
-          We are driven by a passion for technology and a commitment to<br />
-          excellence. With a deep understanding of the ever-evolving IT<br />
-          landscape, we deliver innovative and customized solutions to help<br />
-          businesses harness the power of technology and achieve their goals.
-        </p>
-      </div> -->
     </section>
+
+<section class="section3 mt-52" style="height:520px;">
+
+  <div class="section-3 mx-auto">
+        <div class="text-center">
+            <p class=" font-segoe-ui text-custom-green leading-10 uppercase">
+                SERVICES
+            </p>
+
+            <p class="text-5xl leading-14 capitalize font-segoe-ui text-white">
+                What We Do
+            </p>
+        </div>
+        <div class=" flex mt-16  gap-5 justify-center ">
+
+            <div class="sm:w-1/2 md:w-1/2 lg:w-1/5 p-4 w-64 h-64 bg-gray-900">
+                <img src="Images/rectangle-1.svg" class="w-12 h-12" />
+                <p class="font-normal text-white mt-4 font-segoe-ui "> Web & Mobile App <br /> Development</p>
+                <p class="font-normal text-white mt-2 font-segoe-ui">We create exceptional digital<br /> experiences for web and mobile<br /> platforms.</p>
+            </div>
+
+            <div class="sm:w-1/2 md:w-1/2 lg:w-1/5 p-4  w-64 h-64 bg-gray-900" >
+                <img src="Images/rectangle-2.svg" class="w-12 h-12" />
+                <p class="font-normal text-white mt-4 font-segoe-ui"> Business Analytics &<br />Technical Spec. Writing</p>
+                <p class="font-normal text-white mt-2 font-segoe-ui">We deliver data-driven insights<br /> and precise documentation for<br /> successful software development.</p>
+            </div>
+
+            <div class="sm:w-1/2 md:w-1/2 lg:w-1/5 p-4 w-64 h-64 bg-gray-900" >
+                <img src="Images/rectangle-3.svg" class="w-12 h-12">
+                <p class="font-normal text-white mt-4 font-segoe-ui" > GIS & Map Powered App<br /> Development</p>
+                <p class="font-normal text-white mt-2 font-segoe-ui">We create GIS-powered apps<br /> that redefine location-based<br />experiences.</p>
+            </div>
+
+            <div class="sm:w-1/2 md:w-1/2 lg:w-1/5 p-4 w-64 h-64 bg-gray-900">
+                <img src="Images/rectangle-4.svg" class="w-12 h-12" />
+                <p class="font-normal text-white mt-4 font-segoe-ui"> UI/UX Design</p>
+                <p class="font-normal text-white mt-2 font-segoe-ui"> We build captivating and user-<br />centric interfaces for<br /> unforgettable experiences.</p>
+              </div>
+        </div>
+  </div>
+</section>
 
     <script>
       function Menu(e) {
@@ -213,103 +228,13 @@
   }
 </style>
 
-<!-- 
-<section>
-
-  
-  <div class="section-1 container">
-    <p class="firts-text">
-      Bridging Education,<br />
-      Environment, and Digital<br />
-      Innovation
-    </p>
-
-    <div class="about">
-      <div>
-        <p class="p1" href="#about">ABOUT US</p>
-
-        <p class="p2">
-          Your Trusted Partner in<br />
-          the Digital World
-        </p>
-      </div>
-
-      <div>
-        <img src="images/laptopik.svg" class="laptop" />
-      </div>
-    </div>
-
-    <p class="about-text">
-      We are driven by a passion for technology and a commitment to<br />
-      excellence. With a deep understanding of the ever-evolving IT<br />
-      landscape, we deliver innovative and customized solutions to help<br />
-      businesses harness the power of technology and achieve their goals.
-    </p>
-  </div>
-
-  <div class="section-2 container">
-    <div>
-      <div class="section-title">
-        <p class="section-header">SERVICES</p>
-
-        <p class="section-subheader">What We Do</p>
-      </div>
-      <div class="rectangles">
-        <div class="rectangle">
-          <img src="images/rectangle-1.svg" class="rectangle-b" />
-          <p class="paragraf-text">
-            Web & Mobile App <br />
-            Development
-          </p>
-          <p class="rectangls-text">
-            We create exceptional digital<br />
-            experiences for web and mobile<br />
-            platforms.
-          </p>
-        </div>
-
-        <div class="rectangle">
-          <img src="images/rectangle-2.svg" class="rectangle-b" />
-          <p class="paragraf-text">
-            Business Analytics &<br />Technical Spec. Writing
-          </p>
-          <p class="rectangls-text">
-            We deliver data-driven insights<br />
-            and precise documentation for<br />
-            successful software development.
-          </p>
-        </div>
-
-        <div class="rectangle">
-          <img src="images/rectangle-3.svg" class="rectangle-b" />
-          <p class="paragraf-text">
-            GIS & Map Powered App<br />
-            Development
-          </p>
-          <p class="rectangls-text">
-            We create GIS-powered apps<br />
-            that redefine location-based<br />experiences.
-          </p>
-        </div>
-
-        <div class="rectangle">
-          <img src="images/rectangle-4.svg" class="rectangle-b" />
-          <p class="paragraf-text">UI/UX Design</p>
-          <p class="rectangls-text">
-            We build captivating and user-<br />centric interfaces for<br />
-            unforgettable experiences.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+<!--
   <div class="section-3 container">
     <div>
       <div class="section-title">
         <p class="section-header">PROJECTS</p>
 
-        <p class="section-subheader">Our Works</p>
+<p class="section-subheader">Our Works</p>
         <div class="about-projects">
           <div class="work-p1">
             <img src="images/works-p1.svg" class="rectangle-b" />
