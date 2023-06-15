@@ -32,28 +32,31 @@
           >
             <div class="flex justify-between items-center">
               <span
-                class="text-2xl font-[Poppins] absolute  pl-24 cursor-pointer"
+                class="text-2xl font-[Poppins] flex  pl-24 cursor-pointer"
               >
                 <img
-                  class="logoFirst h-10 inline "
+                  class="logoFirst  inline "
                   src="Images/ArIntellectLogo.svg"
-                  style="height: 77px"
+                
                 />
                 <p class="text-white inline-flex mt-5 font-sans">ArIntellect</p>
               </span>
 
-              <span class="text-3xl   text-white cursor-pointer mx-2 md:hidden relative  ">
+              <span class="text-3xl   text-white cursor-pointer mx-2 md:hidden block  ">
                 <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
               </span>
             </div>
             <ul
-              style="justify-content: center; width: 100%;"
-              class="bg-gray-900 left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 h-24 pl-7 md:opacity-100 opacity-0 top-[-400px] transation-all ease-in duration-500 md:justify-center"
+              style="justify-content: center; width: 70%; margin-inline-end: auto;"
+              class="bg-gray-900 left-0 md:flex md:items-center z-[-1]
+               md:z-auto md:py-0 py-4  md:pl-0 pl-7 h-24  md:opacity-100 
+               opacity-0 top-[-500px] transation-all ease-in duration-500
+               md:justify-center md:static absolute w-full md:w-auto  "
             >
               <li class="li  mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
                 <a
                   href="#about-link"
-                  class="text-xl text-white hover:text-cyan-500 duration-500 font-sans"
+                  class=" text-white hover:text-cyan-500 duration-500 font-sans"
                   onclick="scrollToSection('about-link')">About</a
                 >
               </li>
@@ -61,7 +64,7 @@
                 <a
                   href="#services-link"
                   onclick="scrollToSection('services-link')"
-                  class="text-xl text-white hover:text-cyan-500 duration-500 font-sans"
+                  class=" text-white hover:text-cyan-500 duration-500 font-sans"
                   >Services</a
                 >
               </li>
@@ -69,7 +72,7 @@
                 <a
                   href="#projects-link"
                   onclick="scrollToSection('projects-link')"
-                  class="text-xl text-white hover:text-cyan-500 duration-500 font-sans"
+                  class=" text-white hover:text-cyan-500 duration-500 font-sans"
                   >Projects</a
                 >
               </li>
@@ -77,7 +80,7 @@
                 <a
                   href="#vacancies-link"
                   onclick="scrollToSection('vacancies-link')"
-                  class="text-xl text-white hover:text-cyan-500 duration-500 font-sans"
+                  class=" text-white hover:text-cyan-500 duration-500 font-sans"
                   >Vacancies</a
                 >
               </li>
@@ -279,7 +282,7 @@
       </section>
       <section class="section6">
         <footer>
-           
+
         </footer>
 
       </section>
