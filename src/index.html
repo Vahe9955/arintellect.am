@@ -17,8 +17,7 @@
             type="module"
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
           ></script>
-          <script src="https://assets1.lottiefiles.com/datafiles/HN7OcWNnoqje6iXIiZdWzKxvLIbfeCGTmvXmEm1h/data.json"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+         
           <style>
             @import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
             </style>
@@ -149,22 +148,13 @@
                     businesses harness the power of technology and achieve their goals.
                   </p>
                 </div>
-                <div class="animation absolute" id="animation" style="width: 877px;
-                height: 510px;
+                <div class="animation absolute" id="animation" style="width: 608px;
+              
                 right: 0px;
                 border: 3px solid #73AD21;
                 position: absolute;">
-                  <script>
-                    var animation = bodymovein.loadAnmation({
-                    container: document.getElementById('animation'),
-                    path: 'animation.json',
-                    render: 'svg',
-                    loop:true,
-                    autoplay:true,
-                    name:'demo animation'
-
-                    });
-                  </script>
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                  <lottie-player class="h-64 w-72" src="./animation.json"  background="transparent"  speed="1"  style="width: 712px; height: 424px;"  loop  autoplay></lottie-player>
                 
 
                 </div>
@@ -295,31 +285,34 @@
       </section>
       <section class="section6" style="height:300px;">
         <footer>
-          <div class="flex flex-col md:flex-row md:justify-evenly md:items-center">
+          <div class="flex flex-col md:flex-row md:justify-evenly md:items-start">
             <div class="text-2xl font-[Poppins] flex  cursor-pointer">
               <img class="logoFirst  inline " src="Images/ArIntellectLogo.svg"/>
               <p class="text-white inline-flex mt-4 font-sans">ArIntellect</p>
             </div>
             <div> 
-              <p class="text-white font-sans mt-4 font-bold">Company</p>
-              <p class="text-white font-sans mt-4 text-normal">About</p>
-              <p class="text-white font-sans mt-4 text-normal">Services</p>
-              <p class="text-white font-sans mt-4 text-normal">Contacts</p>
+              <p class="text-white font-sans  font-bold">Company</p>
+              <p class="text-white font-sans mt-6 text-normal">About</p>
+              <p class="text-white font-sans mt-6 text-normal">Services</p>
+              <p class="text-white font-sans mt-6 text-normal">Contacts</p>
             </div>
             <div> 
-              <p class="text-white font-sans mt-4 font-bold">Office</p>
-              <p class="text-white font-sans mt-4 text-normal">Address: Tigran Mets 80 </p>
-              <p class="text-white font-sans mt-4 text-normal">Phone: +374 (00) 000 000 </p>
-              <p class="text-white font-sans mt-4 text-normal" >Email: <img src="Images/emailik.svg" style="display: inline;"/></p>
+              <p class="text-white font-sans font-bold">Office</p>
+              <p class="text-white font-sans mt-6 text-normal">Address: Tigran Mets 80 </p>
+              <p class="text-white font-sans mt-6 text-normal">Phone: +374 (00) 000 000 </p>
+              <p class="text-white font-sans mt-6 text-normal" >Email: <img src="Images/emailik.svg" style="display: inline;"/></p>
             </div>
             <div> 
-              <p class="text-white font-sans mt-4 font-bold">Follow</p>
-              <p class="text-white font-sans mt-4 text-normal">Facebook</p>
-              <p class="text-white font-sans mt-4 text-normal">Linkedin</p>
-              <p class="text-white font-sans mt-4 text-normal">Twitter</p>
+              <p class="text-white font-sans  font-bold">Follow</p>
+              <p class="text-white font-sans mt-6 text-normal">Facebook</p>
+              <p class="text-white font-sans mt-6 text-normal">Linkedin</p>
+              <p class="text-white font-sans mt-6 text-normal">Twitter</p>
             </div>
         </div>
-        </footer>
+      </footer>
+      <div class="text-white font-sans text-center mt-24">
+          &copy;2023 ArIntellect. All Rights Reserved
+      </div>
       </section>
         </body>
       </html>
