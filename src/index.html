@@ -4,7 +4,6 @@
     <style>
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      
     }
     </style>
           <meta charset="UTF-8" />
@@ -27,74 +26,38 @@
           ></script>
         </head>
         <body class="bg-262B3A ">
-          <nav
-            class="h-24 p-5 shadow md:flex md:items-center bg-gray-900 text-white md:justify-between "
-            style="position: relative"
-          >
+          <nav class="fixed top-0 left-0 w-full h-24 p-5 shadow-md flex items-center bg-gray-900 text-white justify-between z-10">
             <div class="flex justify-between items-center">
-              <span
-                class="text-2xl font-[Poppins] flex  pl-24 cursor-pointer"
-              >
-                <img
-                  class="logoFirst  inline "
-                  src="Images/ArIntellectLogo.svg"
-                
-                />
-                <p class="text-white inline-flex mt-4 font-sans">ArIntellect</p>
+              <span class="text-2xl font-[Poppins] flex pl-24 cursor-pointer">
+                <img class="logoFirst inline" src="Images/ArIntellectLogo.svg" />
+                <p class=" text-base pl-2.5  text-white inline-flex mt-5 font-sans">ArIntellect</p>
               </span>
-
-              <span class="text-3xl   text-white cursor-pointer mx-2 md:hidden block  ">
+          
+              <span class="text-3xl text-white cursor-pointer mx-2 md:hidden block">
                 <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
               </span>
             </div>
-            <ul
-              style="justify-content: center; width: 70%; margin-inline-end: auto;"
-              class="bg-gray-900 left-0 md:flex md:items-center z-[-1]
-               md:z-auto md:py-0 py-4  md:pl-0 pl-7 h-24  md:opacity-100 
-               opacity-0 top-[-500px] transation-all ease-in duration-500
-               md:justify-center md:static absolute w-full md:w-auto  "
-            >
-              <li class="li  mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
-                <a
-                  href="#about-link"
-                  class=" text-white hover:text-cyan-500 duration-500 font-sans"
-                  onclick="scrollToSection('about-link')">About</a
-                >
+          
+            <ul class="w-full left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 pl-7 h-24 md:opacity-100 opacity-0 top-[-500px] transition-all ease-in duration-500 md:justify-center md:static absolute md:w-full">
+              <li class="li mr-6 mx-4 my-6 md:my-0 inline-flex">
+                <a href="#about-link" class="text-white hover:text-cyan-500 duration-500 font-sans" onclick="scrollToSection('about-link')">About</a>
               </li>
-              <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
-                <a
-                  href="#services-link"
-                  onclick="scrollToSection('services-link')"
-                  class=" text-white hover:text-cyan-500 duration-500 font-sans"
-                  >Services</a
-                >
+              <li class="li mr-6 mx-4 my-6 md:my-0 inline-flex">
+                <a href="#services-link" onclick="scrollToSection('services-link')" class="text-white hover:text-cyan-500 duration-500 font-sans">Services</a>
               </li>
-              <li class="li mr-6 mx-4 my-6 md:my-0 p-12 inline-flex">
-                <a
-                  href="#projects-link"
-                  onclick="scrollToSection('projects-link')"
-                  class=" text-white hover:text-cyan-500 duration-500 font-sans"
-                  >Projects</a
-                >
+              <li class="li mr-6 mx-4 my-6 md:my-0 inline-flex">
+                <a href="#projects-link" onclick="scrollToSection('projects-link')" class="text-white hover:text-cyan-500 duration-500 font-sans">Projects</a>
               </li>
-              <li class="li mr-6 ms-4 my-6 md:my-0 p-24 inline-flex">
-                <a
-                  href="#vacancies-link"
-                  onclick="scrollToSection('vacancies-link')"
-                  class=" text-white hover:text-cyan-500 duration-500 font-sans"
-                  >Vacancies</a
-                >
+              <li class="li mr-6 ms-4 my-6 md:my-0 inline-flex">
+                <a href="#vacancies-link" onclick="scrollToSection('vacancies-link')" class="text-white hover:text-cyan-500 duration-500 font-sans">Vacancies</a>
               </li>
-              <button
-              href="#contactus-link"
-              onclick="scrollToSection('contactus-link')"
-                class=" relative left-40 li mr-6 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 p-12 py-4 text-white font-medium cursor-pointer font-sans"
-              >
+              <button href="#contactus-link" onclick="scrollToSection('contactus-link')" class="left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans">
                 Contact Us
               </button>
             </ul>
           </nav>
-          <section  class="section1 h-520px" style="height: 520px;">
+          
+          <section  class="section1">
             <!-- <div class="fixed h-170 w-840 bg-[#396D97] filter blur-[368px]"></div> -->
             <div
               class="ellips22"
@@ -133,7 +96,7 @@
                 "
               ></div>
               <div class="about ">
-                <div class=" pl-52  absolute ">
+                <div class="mt-64 pl-52  absolute ">
                   <p class="p1 font-sans font-normal  leading-8 text-custom-green text-3xl max-w-max w-113 h-16  " href="#about">ABOUT US</p>
 
       <p class="p2 text-white max-w-max font-sans  font-bold from-neutral-700 text-5xl">
@@ -147,15 +110,26 @@
                     landscape, we deliver innovative and customized solutions to help<br />
                     businesses harness the power of technology and achieve their goals.
                   </p>
-                </div>
-                <div class="animation absolute h-72 right-0"  id="animation" 
-                >
-                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                  <lottie-player class="h-64 w-72" src="./animation.json"  background="transparent"  speed="1"  style="width: 712px; height: 424px;"  loop  autoplay></lottie-player>
                 
+                  
+
+
+
+
+
+
 
                 </div>
+               
             </div>
+            <div class="animation absolute right-0"  id="animation" 
+            >
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player class="h-64 w-72" src="./animation.json"  background="transparent"  speed="1" style="width: 520px; height: 672px"  loop  autoplay></lottie-player>
+            
+
+            </div>
+
           </section>
 
       <section id="services-link" class="section3 mt-52" style="height:520px;">
