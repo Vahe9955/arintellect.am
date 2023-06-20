@@ -26,9 +26,9 @@
           ></script>
         </head>
         <body class="bg-262B3A ">
-          <nav class="fixed top-0 left-0 w-full h-24 p-5 shadow-md flex items-center bg-gray-900 text-white justify-between z-10">
+          <nav class=".header fixed top-0 left-0 w-full h-24  shadow-md flex items-center bg-gray-900 text-white justify-between z-10">
             <div class="flex justify-between items-center">
-              <span class="text-2xl font-[Poppins] flex pl-24 cursor-pointer">
+              <span class="text-2xl font-[Poppins] flex pl-28 cursor-pointer">
                 <img class="logoFirst inline" src="Images/ArIntellectLogo.svg" />
                 <p class=" text-base pl-2.5  text-white inline-flex mt-5 font-sans">ArIntellect</p>
               </span>
@@ -38,9 +38,9 @@
               </span>
             </div>
           
-            <ul class="w-full left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 pl-7 h-24 md:opacity-100 opacity-0 top-[-500px] transition-all ease-in duration-500 md:justify-center md:static absolute md:w-full">
+            <ul class="gap-11 w-full justify-center left-0 md:flex md:items-center z-[-1] md:z-auto md:py-0 py-4 md:pl-0 pl-7 h-24 md:opacity-100 opacity-0 top-[-500px] transition-all ease-in duration-500 md:justify-center md:static absolute md:w-full">
               <li class="li mr-6 mx-4 my-6 md:my-0 inline-flex">
-                <a href="#about-link" class="text-white hover:text-cyan-500 duration-500 font-sans" onclick="scrollToSection('about-link')">About</a>
+                <a href="#about-link" class="text-white  hover:text-cyan-500 duration-500 font-sans" onclick="scrollToSection('about-link')">About</a>
               </li>
               <li class="li mr-6 mx-4 my-6 md:my-0 inline-flex">
                 <a href="#services-link" onclick="scrollToSection('services-link')" class="text-white hover:text-cyan-500 duration-500 font-sans">Services</a>
@@ -51,9 +51,11 @@
               <li class="li mr-6 ms-4 my-6 md:my-0 inline-flex">
                 <a href="#vacancies-link" onclick="scrollToSection('vacancies-link')" class="text-white hover:text-cyan-500 duration-500 font-sans">Vacancies</a>
               </li>
-              <button href="#contactus-link" onclick="scrollToSection('contactus-link')" class="left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans">
+              <div class="pr-2.5 ">
+              <button href="#contactus-link" onclick="scrollToSection('contactus-link')" class="  right-align left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans">
                 Contact Us
               </button>
+            </div>
             </ul>
           </nav>
           
@@ -96,7 +98,7 @@
                 "
               ></div>
               <div class="about ">
-                <div class="mt-64 pl-52  absolute ">
+                <div class="mt-48 pl-28  absolute ">
                   <p class="p1 font-sans font-normal  leading-8 text-custom-green text-3xl max-w-max w-113 h-16  " href="#about">ABOUT US</p>
 
       <p class="p2 text-white max-w-max font-sans  font-bold from-neutral-700 text-5xl">
@@ -110,22 +112,12 @@
                     landscape, we deliver innovative and customized solutions to help<br />
                     businesses harness the power of technology and achieve their goals.
                   </p>
-                
-                  
-
-
-
-
-
-
-
                 </div>
-               
             </div>
-            <div class="animation absolute right-0"  id="animation" 
+            <div class="animation absolute right-0 mt-8"  id="animation" 
             >
               <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-              <lottie-player class="h-64 w-72" src="./animation.json"  background="transparent"  speed="1" style="width: 520px; height: 672px"  loop  autoplay></lottie-player>
+              <lottie-player class="h-64 w-72 mt-10" src="./animation.json"  background="transparent"  speed="1" style="width: 520px; height: 542px"   loop  autoplay></lottie-player>
             
 
             </div>
@@ -146,7 +138,7 @@
               </div>
               <div class=" flex mt-16  gap-3 justify-center ">
 
-                  <div class="lg:w-1/6 p-4 w-64 h-64 bg-gray-900">
+                  <div class="lg:w-1/5 p-4 w-64 h-64 bg-gray-900">
                     <div class="mt-6 ml-6">
                       <img src="images/rectangle-1.svg"  />
                       <p class="
@@ -155,7 +147,7 @@
                     </div>
                     </div>
 
-                  <div class="lg:w-1/6 p-4 w-64 h-64 bg-gray-900">
+                  <div class="lg:w-1/5 p-4 w-64 h-64 bg-gray-900">
                     <div class="mt-6 ml-6">
                       <img src="images/rectangle-2.svg" class="w-12 h-12" />
                       <p class=" font-bold  text-white mt-4 font-sans inline-block"> Business Analytics &<br />Technical Spec. Writing</p>
@@ -163,7 +155,7 @@
                     </div>
                     </div>
 
-                  <div class="lg:w-1/6 p-4 w-64 h-64 bg-gray-900">
+                  <div class="lg:w-1/5 p-4 w-64 h-64 bg-gray-900">
                     <div class="mt-5 ml-6">
                       <img src="Images/rectangle-3.svg" class="w-12 h-12">
                       <p class=" font-bold  text-white mt-4 font-sans" > GIS & Map Powered App<br /> Development</p>
@@ -171,7 +163,7 @@
                     </div>
                     </div>
 
-                  <div class="lg:w-1/6 p-4 w-64 h-64 bg-gray-900">
+                  <div class="lg:w-1/5 p-4 w-64 h-64 bg-gray-900">
                     <div class="mt-6 ml-6">
                       <img src="Images/rectangle-4.svg" class="w-12 h-12" />
                       <p class=" font-bold  text-white mt-4 font-sans"> UI/UX Design</p>
@@ -192,13 +184,13 @@
               </p>
           </div>
           <div class=" flex mt-16  gap-5 justify-center ">
-            <div class="lg:w-1/3 p-4 w-72 h-64 bg-gray-900" >
+            <div class="lg:w-2/5 p-4 w-72 h-64 bg-gray-900" >
               <img src="Images/works-p1.svg" class="w-12 h-12 mt-4 ml-4" />
               <p class="font-bold text-white mt-4 font-sans ml-4 ">Police Operational Management Center Develoment <br /> & Maintenance</p>
               <article class="font-normal text-white mt-2 font-sans ml-4">This is about management from Emergency Call to Duty<br /> Officers operations with Real Time Collaboration</article>
           </div>
       
-          <div class="lg:w-1/3 p-4  w-72 h-64 bg-gray-900"  >
+          <div class="lg:w-2/5 p-4  w-72 h-64 bg-gray-900"  >
               <img src="Images/works-p2.svg" class="w-12 h-12 mt-4 ml-4" />
               <p class="font-bold text-white mt-4 font-sans ml-4">EcoIntellect Portal</p>
               <article class="font-normal text-white mt-2 font-sans ml-4"> Educational Platform to Learn About Ecology and to Help  <br /> Keep our Environment Clean and Healthy with Gamification Elements</article>
@@ -335,6 +327,13 @@ seciotn.scrollIntoView({ behavior: 'smooth' });
             margin: 0 165px;
           }
         }
+        .header {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
 
   
     </style>
