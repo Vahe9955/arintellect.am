@@ -8,7 +8,7 @@
     </style>
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link href="input.css" rel="stylesheet" />ss
+          <link href="input.css" rel="stylesheet" />
           <link href="/src/Fonts/fonts.css" rel="stylesheet"/>
           <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
           <script src="https://cdn.tailwindcss.com"></script>
@@ -26,7 +26,7 @@
           ></script>
         </head>
         <body class="bg-262B3A ">
-          <nav class=" fixed top-0 left-0 w-full h-24  shadow-md flex items-center bg-gray-900 text-white justify-between z-10">
+          <nav class=" navbar fixed top-0 left-0 w-full h-24  shadow-md flex items-center bg-gray-900 text-white justify-between z-10 header">
             <div class="flex justify-between items-center">
               <span class="text-2xl font-[Poppins] flex pl-20 cursor-pointer">
                 <img class="logoFirst inline" src="Images/ArIntellectLogo.svg" />
@@ -53,11 +53,15 @@
               <li class="li mr-6 ms-4 my-6  lg:my-0 inline-flex">
                 <a href="#vacancies-link" onclick="scrollToSection('vacancies-link')" class="text-white hover:text-cyan-500 duration-500 font-sans">Vacancies</a>
               </li>
-              <div class="pr-20 absolute right-0  ">
-              <button href="#contactus-link" onclick="scrollToSection('contactus-link')" class="  right-align left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans">
-                Contact Us
+              <li  class="mb-12">
+              <div class="pr-20 absolute right-0  "  >
+              <button  onclick="scrollToSection('contactus-link')" class="right-align left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans">
+               <a href="#contactus-link" > Contact Us</a>
               </button>
             </div>
+          </li>
+
+
             </ul>
           </nav>
           
@@ -116,20 +120,19 @@
                   </p>
                 </div>
             </div>
-            <div class="animation absolute pr-20 right-0 mt-8"  id="animation" 
+            <div class="animation absolute pr-20 right-0" style="margin-top: -100px;"  id="animation" 
             >
               <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-              <lottie-player class="h-64 w-72 mt-10" src="./animation.json"  background="transparent"  speed="1" style="width: 520px; height: 542px"   loop  autoplay></lottie-player>
+              <lottie-player  src="./animation.json"  background="transparent"  speed="1" style="width: 820px; height: 942px"   loop  autoplay></lottie-player>
             
 
             </div>
 
           </section>
 
-      <section id="services-link" class="section3 mt-52" style="height:520px;">
-
-        <div class="section-3 mx-auto">
-              <div class="text-center">
+      <section id="services-link" class=" section3 mt-58 " >
+        <div class="section-3  mt-40  ">
+              <div class="mt-20 text-center ">
                   <p class="font-sans font-normal  leading-8 text-custom-green text-2xl uppercase">
                       SERVICES
                   </p>
@@ -175,7 +178,7 @@
               </div>
         </div>
       </section>
-      <section id="projects-link" class="section4">
+      <section id="projects-link" class="section4 mt-40">
         <div class=" mx-auto" style="height:520px;">
           <div class="text-center">
               <p class=" font-sans mr-1 font-normal  leading-8 text-custom-green text-2xl uppercase ">
@@ -202,7 +205,7 @@
         </div>
       </div>
       </section>
-      <section id="contactus-link" class="section5">
+      <section id="contactus-link" class="section5 mt-40">
         <div class="section-5 mx-auto" style="height:520px;">
           <div class="text-center">
               <p class=" font-sans font-normal  leading-8 text-custom-green text-2xl uppercase">
@@ -237,7 +240,7 @@
           </div>
        </div>
       </section>
-      <section id="vacancies-link" class="section6  mx-auto">
+      <section id="vacancies-link" class="section6 mt-40  mx-auto">
         <div class="text-center mt-32" style="height: 520px;">
           <p class="font-sans font-normal  leading-8 text-custom-green text-2xl uppercase">Vacancies</p>
           <p class="text-white max-w-max font-sans inline-block  font-bold from-neutral-700 text-5xl mt-2">Join Our Team</p>
@@ -250,9 +253,9 @@
         </div>
         </div>
       </section>
-      <section class="section6" style="height:300px;">
+      <section class="section6" style="height:300px;">+
         <footer>
-          <div class=" grid grid-cols-4  gap-48 h-64 flex-col md:flex-row md:justify-evenly md:items-start">
+          <div class=" grid grid-cols-4  gap-16 h-64 flex-col md:flex-row md:justify-evenly md:items-start">
             <div class="text-2xl font-[Poppins] flex pl-20  cursor-pointer">
               <img class="logoFirst  inline " src="Images/ArIntellectLogo.svg"/>
               <p class="text-base pl-2.5  text-white inline-flex mt-4 font-sans">ArIntellect</p>
@@ -304,11 +307,23 @@
           }
         }
 
-        function scrollToSection(sectionId) {
-const seciotn = document.getElementById(sectionId);
-seciotn.scrollIntoView({ behavior: 'smooth' });
-      }
-       
+      const navLinks = document.querySelectorAll('navbar')
+      navLinks.forEach((link) =>{
+        link.addEventListener('click',(event) => {
+          event.preventDefault();
+
+          const targedId = link.getAttribute('href');
+
+          document.querySelector(targedId).scrollIntoView({
+            behavior:"smooth",
+
+          })
+        })
+      })
+
+
+
+
 
 
       </script>
