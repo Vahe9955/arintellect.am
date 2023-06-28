@@ -27,7 +27,7 @@
   </head>
   <body class="bg-262B3A">
     <nav
-      class="navbar fixed top-0 left-0 w-full h-24 shadow-md flex items-center bg-gray-900 text-white justify-between z-10 header"
+      class="fixed top-0 left-0 w-full h-24 shadow-lg flex items-center bg-gray-900 text-white justify-between z-10 header"
     >
       <div class="flex justify-between items-center">
         <span class="text-2xl font-[Poppins] flex pl-20 cursor-pointer">
@@ -38,16 +38,15 @@
         </span>
 
         <span
-          class="absolute right-6 text-3xl text-white cursor-pointer mx-2 lg:hidden block"
+          class="absolute right-5 text-3xl cursor-pointer mx-2 lg:hidden block"
         >
           <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
         </span>
       </div>
-
       <ul
-        class="flex gap-11 w-full justify-center left-0 pr-10 mr-24 z-[-1] py-4 pl-7 h-24 opacity-0 top-[-500px] transition-all ease-in duration-1000 absolute tablet:flex lg:items-center lg:z-auto lg:py-0 lg:pl-0 lg:opacity-100 lg:justify-center lg:static lg:w-full"
+        class="ul gap-8 flex-auto justify-center lg:flex lg:items-center z-[-1] lg:z-auto lg:static absolute bg-gray-900 w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400] transition-all ease-in duration-500"
       >
-        <li class="li mr-a mx-4 my-6 lg:my-0 inline-flex">
+        <li class="mx-4 my-6 lg:my-0">
           <a
             href="#about-link"
             class="text-white hover:text-cyan-500 duration-500 font-sans"
@@ -55,7 +54,7 @@
             >About</a
           >
         </li>
-        <li class="li mr-6 mx-4 my-6 lg:my-0 inline-flex">
+        <li class="mx-4 my-6 lg:my-0">
           <a
             href="#services-link"
             onclick="scrollToSection('services-link')"
@@ -63,7 +62,7 @@
             >Services</a
           >
         </li>
-        <li class="li mr-6 mx-4 my-6 lg:my-0 inline-flex">
+        <li class="mx-4 my-6 lg:my-0">
           <a
             href="#projects-link"
             onclick="scrollToSection('projects-link')"
@@ -71,16 +70,16 @@
             >Projects</a
           >
         </li>
-        <li class="li mr-6 ms-4 my-6 lg:my-0 inline-flex">
+        <li class="mx-4 my-6 md:my-0">
           <a
             href="#vacancies-link"
             onclick="scrollToSection('vacancies-link')"
-            class="text-white hover:text-cyan-500 duration-500 font-sans"
+            class="text-white hover:text-cyan-500 duration-500 font-sans lg:mr-28"
             >Vacancies</a
           >
         </li>
-        <li class="mb-12">
-          <div class="pr-20 absolute right-0">
+        <li class="mx-4 my-6 lg:my-0 lg:absolute lg:right-4">
+          <div class="contactusdiv">
             <button
               onclick="scrollToSection('contactus-link')"
               class="right-align left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans"
@@ -362,5 +361,13 @@
 
   .lg1 {
     min-width: 1150px;
+  }
+  @media (max-width: 1023px) {
+    .ul {
+      margin-right: 140px;
+      height: 320px;
+      margin-top: 365px;
+      text-align: center;
+    }
   }
 </style>
