@@ -2,71 +2,97 @@
 <html>
   <head>
     <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-    }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
     </style>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link href="input.css" rel="stylesheet" />
-          <link href="/src/Fonts/fonts.css" rel="stylesheet"/>
-          <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
-          <script src="https://cdn.tailwindcss.com"></script>
-          <script
-            type="module"
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-          ></script>
-         
-          <style>
-            @import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
-            </style>
-          <script
-            nomodule
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-          ></script>
-        </head>
-        <body class="bg-262B3A ">
-          <nav class=" navbar fixed top-0 left-0 w-full h-24  shadow-md flex items-center bg-gray-900 text-white justify-between z-10 header">
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-[Poppins] flex pl-20 cursor-pointer">
-                <img class="logoFirst inline" src="Images/ArIntellectLogo.svg" />
-                <p class=" text-base pl-2.5  text-white inline-flex mt-5 font-sans">ArIntellect</p>
-              </span>
-          
-              <span class="text-3xl text-white cursor-pointer mx-2  lg:hidden block">
-                <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
-              </span>
-            </div>
-          
-            <ul class="flex gap-11 w-full justify-center left-0  pr-10 mr-24  z-[-1]  py-4  pl-7 h-24  opacity-0 top-[-500px] transition-all ease-in
-             duration-1000   absolute 
-              tablet:flex lg:items-center lg:z-auto lg:py-0 lg:pl-0 lg:opacity-100 lg:justify-center lg:static lg:w-full  ">
-              <li class="li mr-a mx-4 my-6  lg:my-0 inline-flex">
-                <a href="#about-link" class="text-white  hover:text-cyan-500 duration-500 font-sans" onclick="scrollToSection('about-link')">About</a>
-              </li>
-              <li class="li mr-6 mx-4 my-6  lg:my-0 inline-flex">
-                <a href="#services-link" onclick="scrollToSection('services-link')" class="text-white hover:text-cyan-500 duration-500 font-sans">Services</a>
-              </li>
-              <li class="li mr-6 mx-4 my-6   lg:my-0 inline-flex">
-                <a href="#projects-link" onclick="scrollToSection('projects-link')" class="text-white hover:text-cyan-500 duration-500 font-sans">Projects</a>
-              </li>
-              <li class="li mr-6 ms-4 my-6  lg:my-0 inline-flex">
-                <a href="#vacancies-link" onclick="scrollToSection('vacancies-link')" class="text-white hover:text-cyan-500 duration-500 font-sans">Vacancies</a>
-              </li>
-              <li  class="mb-12">
-              <div class="pr-20 absolute right-0  "  >
-              <button  onclick="scrollToSection('contactus-link')" class="right-align left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans">
-               <a href="#contactus-link" > Contact Us</a>
-              </button>
-            </div>
-          </li>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="input.css" rel="stylesheet" />
+    <link href="/src/Fonts/fonts.css" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
 
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/segoe-ui-4");
+    </style>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body class="bg-262B3A">
+    <nav
+      class="navbar fixed top-0 left-0 w-full h-24 shadow-md flex items-center bg-gray-900 text-white justify-between z-10 header"
+    >
+      <div class="flex justify-between items-center">
+        <span class="text-2xl font-[Poppins] flex pl-20 cursor-pointer">
+          <img class="logoFirst inline" src="Images/ArIntellectLogo.svg" />
+          <p class="text-base pl-2.5 text-white inline-flex mt-5 font-sans">
+            ArIntellect
+          </p>
+        </span>
 
-            </ul>
-          </nav>
-          
-          <section  class="section1 h-4/5">
-            <!-- <div class="fixed h-170 w-840 bg-[#396D97] filter blur-[368px]"></div> -->
+        <span
+          class="absolute right-6 text-3xl text-white cursor-pointer mx-2 lg:hidden block"
+        >
+          <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <ul
+        class="flex gap-11 w-full justify-center left-0 pr-10 mr-24 z-[-1] py-4 pl-7 h-24 opacity-0 top-[-500px] transition-all ease-in duration-1000 absolute tablet:flex lg:items-center lg:z-auto lg:py-0 lg:pl-0 lg:opacity-100 lg:justify-center lg:static lg:w-full"
+      >
+        <li class="li mr-a mx-4 my-6 lg:my-0 inline-flex">
+          <a
+            href="#about-link"
+            class="text-white hover:text-cyan-500 duration-500 font-sans"
+            onclick="scrollToSection('about-link')"
+            >About</a
+          >
+        </li>
+        <li class="li mr-6 mx-4 my-6 lg:my-0 inline-flex">
+          <a
+            href="#services-link"
+            onclick="scrollToSection('services-link')"
+            class="text-white hover:text-cyan-500 duration-500 font-sans"
+            >Services</a
+          >
+        </li>
+        <li class="li mr-6 mx-4 my-6 lg:my-0 inline-flex">
+          <a
+            href="#projects-link"
+            onclick="scrollToSection('projects-link')"
+            class="text-white hover:text-cyan-500 duration-500 font-sans"
+            >Projects</a
+          >
+        </li>
+        <li class="li mr-6 ms-4 my-6 lg:my-0 inline-flex">
+          <a
+            href="#vacancies-link"
+            onclick="scrollToSection('vacancies-link')"
+            class="text-white hover:text-cyan-500 duration-500 font-sans"
+            >Vacancies</a
+          >
+        </li>
+        <li class="mb-12">
+          <div class="pr-20 absolute right-0">
+            <button
+              onclick="scrollToSection('contactus-link')"
+              class="right-align left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans"
+            >
+              <a href="#contactus-link"> Contact Us</a>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- <section  class="section1 h-4/5">
             <div
               class="ellips22"
               style="
@@ -283,69 +309,58 @@
       <div class="text-white font-sans text-center mt-24">
           &copy;2023 ArIntellect. All Rights Reserved
       </div>
-      </section>
-        </body>
-      </html>
+      </section> -->
+  </body>
+</html>
 
-      <script>
-        function Menu(e) {
-          let list = document.querySelector("ul");
+<script>
+  function Menu(e) {
+    let list = document.querySelector("ul");
 
-          e.name === "menu-outline"
-            ? ((e.name = "close"),
-              list.classList.add("top-[80px]"),
-              list.classList.add("opacity-100")) &&
-              list.classList.toggle("section-1")
-            : (e.name = "menu-outline"),
-            list.classList.remove("top-[80px]"),
-            list.classList.remove("opacity-0");
+    e.name === "menu-outline"
+      ? ((e.name = "close"),
+        list.classList.add("top-[80px]"),
+        list.classList.add("opacity-100")) && list.classList.toggle("section-1")
+      : (e.name = "menu-outline"),
+      list.classList.remove("top-[80px]"),
+      list.classList.remove("opacity-0");
 
-          if (list.style.display === "block") {
-            list.style.display = "none";
-          } else {
-            list.style.display = "block";
-          }
-        }
+    if (list.style.display === "block") {
+      list.style.display = "none";
+    } else {
+      list.style.display = "block";
+    }
+  }
 
-      const navLinks = document.querySelectorAll('navbar')
-      navLinks.forEach((link) =>{
-        link.addEventListener('click',(event) => {
-          event.preventDefault();
+  const navLinks = document.querySelectorAll("navbar");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
 
-          const targedId = link.getAttribute('href');
+      const targedId = link.getAttribute("href");
 
-          document.querySelector(targedId).scrollIntoView({
-            behavior:"smooth",
+      document.querySelector(targedId).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+</script>
+<style>
+  .contactusbutton {
+    background: linear-gradient(
+      97.73deg,
+      #86daa2 0%,
+      #77c4a0 33.33%,
+      #54949b 66.67%,
+      #396d97 100%
+    );
+    white-space: nowrap;
 
-          })
-        })
-      })
+    inline-size: max-content;
+    border-radius: 6px;
+  }
 
-
-
-
-
-
-      </script>
-      <style>
-        .contactusbutton {
-          background: linear-gradient(
-            97.73deg,
-            #86daa2 0%,
-            #77c4a0 33.33%,
-            #54949b 66.67%,
-            #396d97 100%
-          );
-          white-space: nowrap;
-
-          inline-size: max-content;
-          border-radius: 6px;
-        }
-      
-      .lg1{
-        min-width: 1150px;
-      }
-
-
-  
-    </style>
+  .lg1 {
+    min-width: 1150px;
+  }
+</style>
