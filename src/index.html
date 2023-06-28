@@ -27,7 +27,7 @@
   </head>
   <body class="bg-262B3A">
     <nav
-      class="fixed top-0 left-0 w-full h-24 shadow-lg flex items-center    bg-gray-900 text-white justify-between z-10 header"
+      class="fixed top-0 left-0 w-full h-24 shadow-lg flex items-center bg-gray-900 text-white justify-between z-10 header"
     >
       <div class="flex justify-between items-center">
         <span class="text-2xl font-[Poppins] flex pl-20 cursor-pointer">
@@ -43,7 +43,8 @@
           <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
         </span>
       </div>
-      <ul id="ul"
+      <ul
+        id="ul"
         class="ul lg:bg-262B3A gap-8 flex-auto justify-center lg:flex lg:items-center z-[-1] lg:z-auto lg:static absolute bg-gray-900 w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400] transition-all ease-in duration-500"
       >
         <li class="mx-4 my-6 lg:my-0">
@@ -51,7 +52,8 @@
             href="#about-link"
             class="text-white hover:text-cyan-500 duration-500 font-sans header-link"
             onclick="scrollToSection()"
-            >About</a>
+            >About</a
+          >
         </li>
         <li class="mx-4 my-6 lg:my-0">
           <a
@@ -83,35 +85,37 @@
               onclick="scrollToSection()"
               class="right-align left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans"
             >
-              <a href="#contactus-link" class="header-link" > Contact Us</a>
+              <a href="#contactus-link" class="header-link"> Contact Us</a>
             </button>
           </div>
         </li>
       </ul>
     </nav>
 
-    <section  class="section1 h-4/5">
-            <div
-              class="ellips22"
-              style="
-                position: absolute;
-                height: 240px;
-                width: 500px;
-                width: 550;
-                background: #396d97;
-                opacity: 50%;
-                filter: blur(208px);
-              "
-            ></div>
-            <p
-              class="font-semibold text-6xl leading-tight text-center  firts-text text-white mx-auto p-10 w-1/2 mt-36 font-sans"
-            >
-              Bridging Education,<br />
-              Environment, and Digital<br />
-              Innovation
-            </p>
-          </section>
-          <section id="about-link" class="section2"  style="height:520px;">
+    <section class="section1 h-4/5">
+      <div
+        class="ellips22"
+        style="
+          position: absolute;
+          height: 240px;
+          width: 500px;
+          width: 550;
+          background: #396d97;
+          opacity: 50%;
+          filter: blur(208px);
+        "
+      ></div>
+      <div class="justify-center flex w-full 2xl:text-lg p-3 mt-48">
+        <p
+          class="font-semibold sm:text-3xl md:text-6xl leading-tight text-center text-white font-sans"
+        >
+          Bridging Education,<br />
+          Environment, and Digital<br />
+          Innovation
+        </p>
+      </div>
+    </section>
+    <!-- <section id="about-link" class="section2"  style="height:520px;">
             <div style="position: relative">
               <div
                 class="ellips22"
@@ -307,7 +311,7 @@
       <div class="text-white font-sans text-center mt-24">
           &copy;2023 ArIntellect. All Rights Reserved
       </div>
-      </section>
+      </section> -->
   </body>
 </html>
 
@@ -318,7 +322,7 @@
     e.name === "menu-outline"
       ? ((e.name = "close"),
         list.classList.add("top-[80px]"),
-        list.classList.add("opacity-100")) 
+        list.classList.add("opacity-100"))
       : (e.name = "menu-outline"),
       list.classList.remove("top-[80px]"),
       list.classList.remove("opacity-0");
@@ -330,30 +334,29 @@
     }
   }
 
+  var links = document.getElementsByClassName("header-link");
 
+  Array.from(links).forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
 
+      var section = document.getElementById(
+        this.getAttribute("href").substring(1)
+      );
 
-  var links = document.getElementsByClassName('header-link');
+      if (section) {
+        var ul = document.getElementById("ul");
+        ul.style.display = "none";
+        var marginTop = 120; // Margin top value in pixels
+        var scrollPosition = section.offsetTop - marginTop;
 
-Array.from(links).forEach(function(link) {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-
-    var section = document.getElementById(this.getAttribute('href').substring(1));
-
-    if (section) {
-      var ul = document.getElementById('ul')
-      ul.style.display = 'none'
-      var marginTop = 120; // Margin top value in pixels
-      var scrollPosition = section.offsetTop - marginTop;
-
-      window.scrollTo({
-        top: scrollPosition,
-        behavior: 'smooth'
-      });
-    }
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth",
+        });
+      }
+    });
   });
-});
 </script>
 <style>
   .contactusbutton {
@@ -370,12 +373,11 @@ Array.from(links).forEach(function(link) {
     border-radius: 6px;
   }
 
-  
   @media (max-width: 1023px) {
     .ul {
-    height: 2328px;
-    margin-top: 2404px;
-    text-align: center;
+      height: 2328px;
+      margin-top: 2404px;
+      text-align: center;
     }
   }
 </style>
