@@ -318,33 +318,33 @@
 
           <div class="md:mt-20 sm:mt-20 md:pl-20 sm:pl-20 md:grid md:justify-start md:absolute sm:grid sm:justify-start sm:absolute md:w-full sm:w-full ">
             <div class="dropdown lg:hidden md:block sm:block">
-              <p class="text-white font-sans  font-bold">Company</p>
-              <button onclick="toggleDropdown('company-dropdown')" class="absolute right-6 dropdown-toggle text-white font-sans  font-bold"><img src=".//Images/chevron-down.svg" alt=""></button>
-              <select id="company-dropdown" class="dropdown-menu hidden">
-                <option class="text-white font-sans mt-6 text-normal" >About</option>
-                <option class="text-white font-sans mt-6 text-normal">Services</option>
-                <poption class="text-white font-sans mt-6 text-normal">Contacts</poption>
-              </select>
+              <p class="text-white font-sans font-bold">Company</p>
+              <button id="companyb" onclick="CompanyFunction(this)" class="hover:text-cyan-500 cursor-pointer absolute right-8  text-white font-sans  font-bold"><img src=".//Images/chevron-down.svg" alt=""></button>
+              <div id="company-dropdown" class="dropdown-menu hidden">
+                <p class="text-white font-sans mt-6 text-normal" >About</p>
+                <p class="text-white font-sans mt-6 text-normal">Services</p>
+                <p class="text-white font-sans mt-6 text-normal">Contacts</p>
+              </div>
             </div>
             
             <div class="dropdown lg:hidden md:block sm:block">
               <p class="text-white font-sans font-bold">Office</p>
-              <button onclick="toggleDropdown('office-dropdown')" class=" absolute right-6 dropdown-toggle text-white font-sans  font-bold"> <img src=".//Images/chevron-down.svg"></button>
-              <select id="office-dropdown" class="dropdown-menu hidden">
-                <optionp class="text-white font-sans mt-6 text-normal" >Address: Tigran Mets 80</optionp>
-                <poption class="text-white font-sans mt-6 text-normal">Phone: +374 (00) 000 000</poption>
-                <option class="text-white font-sans mt-6 text-normal">Email: <img src="Images/emailik.svg" style="display: inline;" /></option>
-              </select>
+              <button id="officeb" onclick="toggleofficeDropdown()" class="hover:text-cyan-500 absolute right-8  text-white font-sans  font-bold"> <img src=".//Images/chevron-down.svg"></button>
+              <div id="office-dropdown" class="dropdown-menu hidden">
+                <p class="text-white font-sans mt-6 text-normal" >Address: Tigran Mets 80</p>
+                <p class="text-white font-sans mt-6 text-normal">Phone: +374 (00) 000 000</p>
+                <p class="text-white font-sans mt-6 text-normal">Email: <img src="Images/emailik.svg" style="display: inline;" /></p>
+              </div>
             </div>
             
             <div class="dropdown lg:hidden md:block sm:block">
               <p class="text-white font-sans font-bold">Follow</p>
-              <button onclick="toggleDropdown('follow-dropdown')" class="absolute right-6   dropdown-toggle text-white font-sans  font-bold"><img src=".//Images/chevron-down.svg"></button>
-              <select id="follow-dropdown" class="dropdown-menu hidden">
-                <option class="text-white font-sans mt-6 text-normal">Facebook</option>
-                <option class="text-white font-sans mt-6 text-normal">Linkedin</option>
-                <option class="text-white font-sans mt-6 text-normal">Twitter</option>
-              </select>
+              <button id="followb" onclick="togglefollowDropdown()" class="hover:text-cyan-500 absolute right-8   text-white font-sans  font-bold"><img src=".//Images/chevron-down.svg"></button>
+              <div id="follow-dropdown" class="dropdown-menu hidden">
+                <p class="text-white font-sans mt-6 text-normal">Facebook</p>
+                <p class="text-white font-sans mt-6 text-normal">Linkedin</p>
+                <p class="text-white font-sans mt-6 text-normal">Twitter</p>
+              </div>
             </div>
           </div>
         </div>
@@ -403,15 +403,23 @@
     });
   });
 
+  function CompanyFunction() {
+    const button = document.getElementById('companyb');
+    const div = document.getElementById('company-dropdown');
 
-  function toggleDropdown(dropdownId) {
-  var dropdownMenu = document.getElementById(dropdownId);
-  if (dropdownMenu.classList.contains('hidden')) {
-    dropdownMenu.classList.remove('hidden');
-  } else {
-    dropdownMenu.classList.add('hidden');
+    div.classList.remove('hidden');
+    div.style.display = 'block';
+    
   }
-}
+  
+  // Attach event listener separately
+  const button = document.getElementById('companyb');
+  button.addEventListener('click', CompanyFunction);
+
+
+
+
+
 </script>
 <style>
   .contactusbutton {
