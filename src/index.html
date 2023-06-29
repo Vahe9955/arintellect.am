@@ -276,7 +276,7 @@
        </div>
       </section>
 
-      <!--
+ 
       <section id="vacancies-link" class="section6   mx-auto">
         <div class="text-center mt-20" style="height: 720px;">
           <p class="font-sans font-normal  leading-8 text-custom-green text-2xl uppercase">Vacancies</p>
@@ -291,36 +291,68 @@
         </div>
       </section>
       <section class="section6" style="height:300px;">+
-        <footer>
+        <footer class="">
           <div class=" grid grid-cols-4  gap-16 h-64 flex-col md:flex-row md:justify-evenly md:items-start">
-            <div class="text-2xl font-[Poppins] flex pl-20  cursor-pointer">
+            <div class="text-xl font-[Poppins] flex pl-20   cursor-pointer">
               <img class="logoFirst  inline " src="Images/ArIntellectLogo.svg"/>
-              <p class="text-base pl-2.5  text-white inline-flex mt-4 font-sans">ArIntellect</p>
+              <p class="text-base pl-2.5  text-white inline-flex md:pr-2 mt-4 font-sans">ArIntellect</p>
             </div>
-            <div class=" max-h-full"> 
+            <div class=" max-h-full md:hidden sm:hidden lg:block "> 
               <p class="text-white font-sans  font-bold">Company</p>
               <p class="text-white font-sans mt-6 text-normal">About</p>
               <p class="text-white font-sans mt-6 text-normal">Services</p>
               <p class="text-white font-sans mt-6 text-normal">Contacts</p>
             </div>
-            <div class=" max-h-full"> 
+            <div class=" max-h-full md:hidden sm:hidden lg:block"> 
               <p class="text-white font-sans font-bold">Office</p>
               <p class="text-white font-sans mt-6 text-normal">Address: Tigran Mets 80 </p>
               <p class="text-white font-sans mt-6 text-normal">Phone: +374 (00) 000 000 </p>
               <p class="text-white font-sans mt-6 text-normal" >Email: <img src="Images/emailik.svg" style="display: inline;"/></p>
             </div>
-            <div class="pr-20 max-h-full"> 
+            <div class="pr-20 max-h-full md:hidden sm:hidden lg:block "> 
               <p class="text-white font-sans  font-bold">Follow</p>
               <p class="text-white font-sans mt-6 text-normal">Facebook</p>
               <p class="text-white font-sans mt-6 text-normal">Linkedin</p>
               <p class="text-white font-sans mt-6 text-normal">Twitter</p>
             </div>
+
+          <div class="md:mt-20 sm:mt-20 md:pl-20 sm:pl-20 md:grid md:justify-start md:absolute sm:grid sm:justify-start sm:absolute md:w-full sm:w-full ">
+            <div class="dropdown lg:hidden md:block sm:block">
+              <p class="text-white font-sans  font-bold">Company</p>
+              <button onclick="toggleDropdown('company-dropdown')" class="absolute right-6 dropdown-toggle text-white font-sans  font-bold"><img src=".//Images/chevron-down.svg" alt=""></button>
+              <select id="company-dropdown" class="dropdown-menu hidden">
+                <option class="text-white font-sans mt-6 text-normal" >About</option>
+                <option class="text-white font-sans mt-6 text-normal">Services</option>
+                <poption class="text-white font-sans mt-6 text-normal">Contacts</poption>
+              </select>
+            </div>
+            
+            <div class="dropdown lg:hidden md:block sm:block">
+              <p class="text-white font-sans font-bold">Office</p>
+              <button onclick="toggleDropdown('office-dropdown')" class=" absolute right-6 dropdown-toggle text-white font-sans  font-bold"> <img src=".//Images/chevron-down.svg"></button>
+              <select id="office-dropdown" class="dropdown-menu hidden">
+                <optionp class="text-white font-sans mt-6 text-normal" >Address: Tigran Mets 80</optionp>
+                <poption class="text-white font-sans mt-6 text-normal">Phone: +374 (00) 000 000</poption>
+                <option class="text-white font-sans mt-6 text-normal">Email: <img src="Images/emailik.svg" style="display: inline;" /></option>
+              </select>
+            </div>
+            
+            <div class="dropdown lg:hidden md:block sm:block">
+              <p class="text-white font-sans font-bold">Follow</p>
+              <button onclick="toggleDropdown('follow-dropdown')" class="absolute right-6   dropdown-toggle text-white font-sans  font-bold"><img src=".//Images/chevron-down.svg"></button>
+              <select id="follow-dropdown" class="dropdown-menu hidden">
+                <option class="text-white font-sans mt-6 text-normal">Facebook</option>
+                <option class="text-white font-sans mt-6 text-normal">Linkedin</option>
+                <option class="text-white font-sans mt-6 text-normal">Twitter</option>
+              </select>
+            </div>
+          </div>
         </div>
       </footer>
       <div class="text-white font-sans text-center mt-24">
           &copy;2023 ArIntellect. All Rights Reserved
       </div>
-      </section> -->
+      </section>
   </body>
 </html>
 
@@ -370,6 +402,16 @@
       }
     });
   });
+
+
+  function toggleDropdown(dropdownId) {
+  var dropdownMenu = document.getElementById(dropdownId);
+  if (dropdownMenu.classList.contains('hidden')) {
+    dropdownMenu.classList.remove('hidden');
+  } else {
+    dropdownMenu.classList.add('hidden');
+  }
+}
 </script>
 <style>
   .contactusbutton {
