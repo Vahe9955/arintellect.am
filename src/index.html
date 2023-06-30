@@ -40,7 +40,7 @@
         <span
           class="absolute right-5 text-3xl cursor-pointer mx-2 lg:hidden block"
         >
-          <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+          <ion-icon id="menu-outline" name="menu-outline" onclick="Menu(this)"></ion-icon>
         </span>
       </div>
       <ul
@@ -409,7 +409,8 @@
       event.preventDefault();
 
       
-
+      var menu = document.getElementById('menu-outline');
+          menu.name =  "menu-outline"
       var section = document.getElementById(
         this.getAttribute("href").substring(1)
         );
@@ -418,6 +419,8 @@
           var w = window.innerWidth;
         if(w <= 1023)
         {
+         
+
         var ul = document.getElementById("ul");
         ul.style.display = "none";
       }
