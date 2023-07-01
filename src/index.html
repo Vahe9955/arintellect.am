@@ -294,7 +294,7 @@
         <footer class="">
           <div class=" grid grid-cols-4  gap-16 h-64 flex-col md:flex-row md:justify-evenly md:items-start">
             <div class="text-xl font-[Poppins] flex pl-20   cursor-pointer">
-              <img class="logoFirst  inline " src="Images/ArIntellectLogo.svg"/>
+              <img class="logoFirst  inline sm:mb-48" src="Images/ArIntellectLogo.svg"/>
               <p class="text-base pl-2.5  text-white inline-flex md:pr-2 mt-4 font-sans">ArIntellect</p>
             </div>
             <div class=" max-h-full md:hidden sm:hidden lg:block "> 
@@ -350,7 +350,7 @@
             </div>
             
       </footer>
-      <div class="text-white font-sans text-center mt-24">
+      <div id="footertext" class="text-white font-sans text-center mt-52">
           &copy;2023 ArIntellect. All Rights Reserved
       </div>
       </section>
@@ -359,138 +359,183 @@
 </html>
 <script>
 
-var rotationStateCompany = 0;
-
-function OpenCompany() {
+  var rotationStateCompany = 0;
   
-  var companydropdown = document.getElementById("company-dropdown");
-  companydropdown.classList.toggle('hidden');
-  
-  var arrowcompany = document.getElementById("arrowcompany");
-  
-  if (rotationStateCompany === 0) {
-    arrowcompany.style.transform = 'rotate(180deg)';
-    rotationStateCompany = 1;
-  } else {
-    arrowcompany.style.transform = 'rotate(360deg)';
-    rotationStateCompany = 0;
-  }
-};
-var rotationStateOffice = 0;
+  function OpenCompany() {
+    var footertext = document.getElementById("footertext");
+    footertext.style.top = "50px";
 
-function OpenOffice() {
-
-
-  var officedropdown = document.getElementById("office-dropdown");
-  officedropdown.classList.toggle('hidden');
-  
-  var arrowoffice = document.getElementById("arrowoffice");
-  
-  if (rotationStateOffice === 0) {
-    arrowoffice.style.transform = 'rotate(180deg)';
-    rotationStateOffice = 1;
-  } else {
-    arrowoffice.style.transform = 'rotate(360deg)';
-    rotationStateOffice = 0;
-  }
-};
-var rotationStateFollow = 0;
-
-function OpenFollow() {
-
-
-  var followdropdown = document.getElementById("follow-dropdown");
-  followdropdown.classList.toggle('hidden');
-  
-  var arrowfollow = document.getElementById("arrowfollow");
-  
-  if (rotationStateFollow === 0) {
-    arrowfollow.style.transform = 'rotate(180deg)';
-    rotationStateFollow = 1;
-  } else {
-    arrowfollow.style.transform = 'rotate(360deg)';
-    rotationStateFollow = 0;
-  }
-};
-
-
-  
-    function Menu(e) {
-
-    var mediaQuery = window.matchMedia("(max-width: 1023px)");
-
-    if (mediaQuery.matches) {
-        var ulElement = document.querySelector(".ul");
-        ulElement.style.height = "2328px";
-        ulElement.style.marginTop = "2404px";
-        ulElement.style.textAlign = "center";
-    }
-
-
-      let list = document.querySelector("ul");
-      
-      e.name === "menu-outline"
-      ? ((e.name = "close"),
-      list.classList.add("top-[80px]"),
-      list.classList.add("opacity-100"))
-      : (e.name = "menu-outline"),
-      list.classList.remove("top-[80px]"),
-      list.classList.remove("opacity-0");
-
-    if (list.style.display === "block") {
-      list.style.display = "none";
+    var companydropdown = document.getElementById("company-dropdown");
+    companydropdown.classList.toggle('hidden');
+    
+    var arrowcompany = document.getElementById("arrowcompany");
+    
+    if (rotationStateCompany === 0) {
+      arrowcompany.style.transform = 'rotate(180deg)';
+      rotationStateCompany = 1;
     } else {
-      list.style.display = "block";
+      arrowcompany.style.transform = 'rotate(360deg)';
+      rotationStateCompany = 0;
     }
-  }
-
-  var links = document.getElementsByClassName("header-link");
-
+  };
+  var rotationStateOffice = 0;
+  
+  function OpenOffice() {
+    var footertext = document.getElementById("footertext");
+    footertext.style.top = "50px";
+  
+    var officedropdown = document.getElementById("office-dropdown");
+    officedropdown.classList.toggle('hidden');
+    
+    var arrowoffice = document.getElementById("arrowoffice");
+    
+    if (rotationStateOffice === 0) {
+      arrowoffice.style.transform = 'rotate(180deg)';
+      rotationStateOffice = 1;
+    } else {
+      arrowoffice.style.transform = 'rotate(360deg)';
+      rotationStateOffice = 0;
+    }
+  };
+  var rotationStateFollow = 0;
+  
+  function OpenFollow() {
+    var footertext = document.getElementById("footertext");
+    footertext.style.top = "50px";
+  
+    var followdropdown = document.getElementById("follow-dropdown");
+    followdropdown.classList.toggle('hidden');
+    
+    var arrowfollow = document.getElementById("arrowfollow");
+    
+    if (rotationStateFollow === 0) {
+      arrowfollow.style.transform = 'rotate(180deg)';
+      rotationStateFollow = 1;
+    } else {
+      arrowfollow.style.transform = 'rotate(360deg)';
+      rotationStateFollow = 0;
+    }
+  };
+  
+  
+    
+  function Menu(e) {
+  
+      var mediaQuery = window.matchMedia("(max-width: 1023px)");
+  
+      if (mediaQuery.matches) {
+          var ulElement = document.querySelector(".ul");
+          ulElement.style.height = "2328px";
+          ulElement.style.marginTop = "2404px";
+          ulElement.style.textAlign = "center";
+      }
+  
+  
+        let list = document.querySelector("ul");
+        
+        e.name === "menu-outline"
+        ? ((e.name = "close"),
+        list.classList.add("top-[80px]"),
+        list.classList.add("opacity-100"))
+        : (e.name = "menu-outline"),
+        list.classList.remove("top-[80px]"),
+        list.classList.remove("opacity-0");
+  
+      if (list.style.display === "block") {
+        list.style.display = "none";
+      } else {
+        list.style.display = "block";
+      }
+    }
+   
+  
+  
+    var links = document.getElementsByClassName("header-link");
+  
   Array.from(links).forEach(function (link) {
     link.addEventListener("click", function (event) {
       event.preventDefault();
-
-      
+  
       var menu = document.getElementById('menu-outline');
-          menu.name =  "menu-outline"
+      menu.name = "menu-outline";
+      
       var section = document.getElementById(
         this.getAttribute("href").substring(1)
-        );
-        
-        if (section) {
-          var w = window.innerWidth;
-        if(w <= 1023)
-        {
-
-        var ul = document.getElementById("ul");
-        ul.style.display = "none";
-      }
-        var marginTop = 120; // Margin top value in pixels
+      );
+  
+      if (section) {
+        var w = window.innerWidth;
+        if (w <= 1023) {
+          var ul = document.getElementById("ul");
+          ul.style.display = "none";
+        }
+  
+        var marginTop = 110; // Margin top value in pixels
         var scrollPosition = section.offsetTop - marginTop;
-
-        window.scrollTo({
+  
+        var scrollOptions = {
+          overflow: scroll,
           top: scrollPosition,
           behavior: "smooth",
-        });
+          duration: 600 // Duration in milliseconds (0.4 seconds)
+        };
+  
+        smoothScrollTo(scrollOptions);
       }
     });
   });
-  </script>
   
-<style>
-  .contactusbutton {
-    background: linear-gradient(
-      97.73deg,
-      #86daa2 0%,
-      #77c4a0 33.33%,
-      #54949b 66.67%,
-      #396d97 100%
-    );
-    white-space: nowrap;
-
-    inline-size: max-content;
-    border-radius: 6px;
+  function smoothScrollTo(options) {
+    var start = window.pageYOffset || document.documentElement.scrollTop;
+    var startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+    var duration = options.duration;
+    var end = options.top;
+  
+    var easeInOutCubic = function (t) {
+      return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+    };
+  
+    var scroll = function () {
+      var currentTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+      var time = Math.min(1, ((currentTime - startTime) / duration));
+      var timeFunction = easeInOutCubic(time);
+  
+      window.scrollTo(0, Math.ceil((timeFunction * (end - start)) + start));
+  
+      if (window.pageYOffset || document.documentElement.scrollTop !== end) {
+        requestAnimationFrame(scroll);
+      }
+    };
+  
+    scroll();
   }
-
- 
-</style>
+  
+  
+  
+  
+  
+  
+  
+  
+    </script>
+    
+  <style>
+    .contactusbutton {
+      background: linear-gradient(
+        97.73deg,
+        #86daa2 0%,
+        #77c4a0 33.33%,
+        #54949b 66.67%,
+        #396d97 100%
+      );
+      white-space: nowrap;
+  
+      inline-size: max-content;
+      border-radius: 6px;
+    }
+  
+    .html{
+      overflow-y: scroll;
+    }
+  </style>
+  
