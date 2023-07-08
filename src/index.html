@@ -40,7 +40,7 @@
         <span
           class="absolute right-5 text-3xl cursor-pointer mx-2 lg:hidden block"
         >
-          <ion-icon id="menu-outline" name="menu-outline" onclick="Menu(this)"></ion-icon>
+          <ion-icon id="menu-outline" name="menu-outline" onclick="menu(this)"></ion-icon>
         </span>
       </div>
       <ul
@@ -328,7 +328,7 @@
             <div class="md:mt-20 sm:mt-20 md:pl-20 sm:pl-20 md:grid md:justify-start md:absolute sm:grid sm:justify-start sm:absolute md:w-full sm:w-full">
               <div class="dropdown lg:hidden md:block sm:block">
                 <p class="text-white font-sans font-bold">Company</p>
-                <button onclick="OpenCompany()" class="absolute right-6 dropdown-toggle text-white font-sans font-bold"><img id="arrowcompany" src="Images/chevron-down.svg"></button>
+                <button onclick="openCompany()" class="absolute right-6 dropdown-toggle text-white font-sans font-bold"><img id="arrowcompany" src="Images/chevron-down.svg"></button>
                 <div id="company-dropdown" class="dropdown-menu hidden">
                   <p class="text-white font-sans mt-6 text-normal">About</p>
                   <p class="text-white font-sans mt-6 text-normal">Services</p>
@@ -339,7 +339,7 @@
               
               <div class="dropdown lg:hidden md:block sm:block">
                 <p class="text-white font-sans font-bold">Office</p>
-                <button onclick="OpenOffice()" class="absolute right-6 dropdown-toggle text-white font-sans font-bold"><img id="arrowoffice" src="Images/chevron-down.svg"></button>
+                <button onclick="openOffice()" class="absolute right-6 dropdown-toggle text-white font-sans font-bold"><img id="arrowoffice" src="Images/chevron-down.svg"></button>
                 <div id="office-dropdown" class="dropdown-menu hidden">
                   <p class="text-white font-sans mt-6 text-normal">Address: Tigran Mets 80</p>
                   <p class="text-white font-sans mt-6 text-normal">Phone: +374 (00) 000 000</p>
@@ -349,11 +349,11 @@
               
               <div class="dropdown lg:hidden md:block sm:block">
                 <p class="text-white font-sans font-bold">Follow</p>
-                <button  onclick="OpenFollow()"  class="absolute right-6 dropdown-toggle text-white font-sans font-bold"><img id="arrowfollow" src="Images/chevron-down.svg"></button>
+                <button  onclick="openFollow()"  class="absolute right-6 dropdown-toggle text-white font-sans font-bold"><img id="arrowfollow" src="Images/chevron-down.svg"></button>
                 <div id="follow-dropdown" class="dropdown-menu hidden">
-                  <p class="text-white font-sans mt-6 text-normal">Facebook</p>
-                  <p class="text-white font-sans mt-6 text-normal">Linkedin</p>
-                  <p class="text-white font-sans mt-6 text-normal">Twitter</p>
+                  <a href="" target="_blank"  class="text-white font-sans mt-6 text-normal">Facebook</a>
+                  <a href="" target="_blank"  class="text-white font-sans mt-6 text-normal">Linkedin</a>
+                  <a href="" target="_blank"  class="text-white font-sans mt-6 text-normal">Twitter</a>
                 </div>
               </div>
             </div>
@@ -368,98 +368,92 @@
   </body>
 </html>
 <script>
+var rotationStateCompany = 0;
 
-  var rotationStateCompany = 0;
+function openCompany() {
+  var footertext = document.getElementById("footertext");
+  footertext.style.marginTop = "70px";
+  var companydropdown = document.getElementById("company-dropdown");
+  companydropdown.classList.toggle('hidden');
   
-  function OpenCompany() {
-    var footertext = document.getElementById("footertext");
-    footertext.style.marginTop = "70px";
+  var arrowcompany = document.getElementById("arrowcompany");
+  
+  if (rotationStateCompany === 0) {
+    arrowcompany.style.transform = 'rotate(180deg)';
+    rotationStateCompany = 1;
+  } else {
+    arrowcompany.style.transform = 'rotate(360deg)';
+    rotationStateCompany = 0;
+  }
+};
+var rotationStateOffice = 0;
 
-    var companydropdown = document.getElementById("company-dropdown");
-    companydropdown.classList.toggle('hidden');
-    
-    var arrowcompany = document.getElementById("arrowcompany");
-    
-    if (rotationStateCompany === 0) {
-      arrowcompany.style.transform = 'rotate(180deg)';
-      rotationStateCompany = 1;
-    } else {
-      arrowcompany.style.transform = 'rotate(360deg)';
-      rotationStateCompany = 0;
-    }
-  };
-  var rotationStateOffice = 0;
+function openOffice() {
+  var footertext = document.getElementById("footertext");
+  footertext.style.top = "50px";
+
+  var officedropdown = document.getElementById("office-dropdown");
+  officedropdown.classList.toggle('hidden');
   
-  function OpenOffice() {
-    var footertext = document.getElementById("footertext");
-    footertext.style.top = "50px";
+  var arrowoffice = document.getElementById("arrowoffice");
   
-    var officedropdown = document.getElementById("office-dropdown");
-    officedropdown.classList.toggle('hidden');
-    
-    var arrowoffice = document.getElementById("arrowoffice");
-    
-    if (rotationStateOffice === 0) {
-      arrowoffice.style.transform = 'rotate(180deg)';
-      rotationStateOffice = 1;
-    } else {
-      arrowoffice.style.transform = 'rotate(360deg)';
-      rotationStateOffice = 0;
-    }
-  };
-  var rotationStateFollow = 0;
+  if (rotationStateOffice === 0) {
+    arrowoffice.style.transform = 'rotate(180deg)';
+    rotationStateOffice = 1;
+  } else {
+    arrowoffice.style.transform = 'rotate(360deg)';
+    rotationStateOffice = 0;
+  }
+};
+var rotationStateFollow = 0;
+
+function openFollow() {
+  var footertext = document.getElementById("footertext");
+  footertext.style.top = "50px";
+
+  var followdropdown = document.getElementById("follow-dropdown");
+  followdropdown.classList.toggle('hidden');
   
-  function OpenFollow() {
-    var footertext = document.getElementById("footertext");
-    footertext.style.top = "50px";
-  
-    var followdropdown = document.getElementById("follow-dropdown");
-    followdropdown.classList.toggle('hidden');
+  var arrowfollow = document.getElementById("arrowfollow");
     
-    var arrowfollow = document.getElementById("arrowfollow");
-    
-    if (rotationStateFollow === 0) {
+  if (rotationStateFollow === 0) {
       arrowfollow.style.transform = 'rotate(180deg)';
       rotationStateFollow = 1;
-    } else {
+  }
+  else {
       arrowfollow.style.transform = 'rotate(360deg)';
       rotationStateFollow = 0;
-    }
-  };
-  
-  
-    
-  function Menu(e) {
-  
-      var mediaQuery = window.matchMedia("(max-width: 1023px)");
-  
-      if (mediaQuery.matches) {
+  }
+};
+
+
+function menu(e) {
+  var mediaQuery = window.matchMedia("(max-width: 1023px)");
+    if (mediaQuery.matches) {
           var ulElement = document.querySelector(".ul");
           ulElement.style.height = "2328px";
           ulElement.style.marginTop = "2404px";
           ulElement.style.textAlign = "center";
-      }
-  
-  
-        let list = document.querySelector("ul");
-        
-        e.name === "menu-outline"
-        ? ((e.name = "close"),
-        list.classList.add("top-[80px]"),
-        list.classList.add("opacity-100"))
-        : (e.name = "menu-outline"),
-        list.classList.remove("top-[80px]"),
-        list.classList.remove("opacity-0");
-  
-      if (list.style.display === "block") {
-        list.style.display = "none";
-      } else {
-        list.style.display = "block";
-      }
     }
-   
-  
-    var links = document.getElementsByClassName("header-link");
+
+let list = document.querySelector("ul");
+    e.name === "menu-outline"
+    ? ((e.name = "close"),
+    list.classList.add("top-[80px]"),
+    list.classList.add("opacity-100"))
+    : (e.name = "menu-outline"),
+    list.classList.remove("top-[80px]"),
+    list.classList.remove("opacity-0");
+    
+    if (list.style.display === "block") {
+      list.style.display = "none";
+    }
+    else {
+      list.style.display = "block";
+    }
+}
+
+var links = document.getElementsByClassName("header-link");
 
 Array.from(links).forEach(function (link) {
   link.addEventListener("click", function (event) {
@@ -517,12 +511,6 @@ function smoothScrollTo(options) {
 
   scroll();
 }
-  
-  
-  
-  
-  
-  
 </script>
     
 <style>
