@@ -1,14 +1,590 @@
 <!DOCTYPE html>
 <html>
   <head>
+   
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./Images/ArIntellectLogo.svg" type="image/x-icon">
     <link href="input.css" rel="stylesheet" />
+    <link href="/src/Fonts/fonts.css" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/segoe-ui-4");
+    </style>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
-  <body>
-    <div
-      class="absolute -left-40 h-96 w-1/2 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-900 to-indigo-500"
-    ></div>
-    <h1 class="text-4xl text-center text-red-600">Hello world!</h1>
+  <body class="bg-262B3A">
+    <nav
+      class="fixed top-0 left-0 w-full h-24 shadow-lg flex items-center bg-gray-900 text-white justify-between z-10 header"
+    >
+      <div class="flex justify-between items-center">
+        <span class="text-2xl font-[Poppins] flex pl-20 cursor-pointer">
+          <img class="logoFirst inline" src="Images/ArIntellectLogo.svg" />
+          <p class="text-base pl-2.5 text-white inline-flex mt-5 font-sans">
+            ArIntellect
+          </p>
+        </span>
+
+        <span
+          class="absolute right-5 text-3xl cursor-pointer mx-2 lg:hidden block"
+        >
+          <ion-icon id="menu-outline" name="menu-outline" onclick="menu(this)"></ion-icon>
+        </span>
+      </div>
+      <ul
+        id="ul"
+        class="ul  lg:bg-262B3A gap-8 flex-auto justify-center lg:flex lg:items-center z-[-1] lg:z-auto lg:static absolute bg-gray-900 w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400] transition-all ease-in duration-500"
+      >
+        <li class="mx-4 my-6 lg:my-0">
+          <a
+            href="#about-link"
+            class="text-white hover:text-cyan-500 duration-500 font-sans header-link"
+            onclick="scrollToSection()"
+            >About</a
+          >
+        </li>
+        <li class="mx-4 my-6 lg:my-0">
+          <a
+            href="#services-link"
+            onclick="scrollToSection()"
+            class="text-white hover:text-cyan-500 duration-500 font-sans header-link"
+            >Services</a
+          >
+        </li>
+        <li class="mx-4 my-6 lg:my-0">
+          <a
+            href="#projects-link"
+            onclick="scrollToSection()"
+            class="text-white hover:text-cyan-500 duration-500 font-sans header-link"
+            >Projects</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a
+            href="#vacancies-link"
+            onclick="scrollToSection()"
+            class="text-white hover:text-cyan-500 duration-500 font-sans lg:mr-28 header-link"
+            >Vacancies</a
+          >
+        </li>
+        <li class="mx-4 my-6 lg:my-0 lg:absolute lg:right-4">
+          <div class="contactusdiv">
+            <button
+              onclick="scrollToSection()"
+              class="right-align left-40 li mr-6 p-10 contactusbutton mx-4 w-36 h-14 hover:bg-cyan-500 py-4 text-white font-medium cursor-pointer font-sans"
+            >
+              <a href="#contactus-link" class="header-link"> Contact Us</a>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="section1 h-4/5">
+      <div
+        class="ellips22"
+        style="
+          position: absolute;
+          height: 240px;
+          width: 500px;
+          width: 550;
+          background: #396d97;
+          opacity: 50%;
+          filter: blur(208px);
+        "
+      ></div>
+      <div class="justify-center flex w-full 2xl:text-lg p-3 mt-60 animate-left-to-right">
+        <p class="font-semibold sm:text-5xl md:text-6xl leading-tight text-center text-white font-sans" style="line-height: 1.3;">
+          Bridging Education,<br/>
+        </p>
+      </div>
+      <div class="justify-center flex w-full 2xl:text-lg animate-right-to-left">
+        <p class="font-semibold sm:text-5xl md:text-6xl leading-tight text-center text-white font-sans" style="line-height: 1.3;">
+          Environment, and Digital
+        </p>
+      </div>
+      <div class="justify-center flex w-full 2xl:text-lg  animate-left-to-right">
+        <p class="font-semibold sm:text-5xl md:text-6xl leading-tight text-center text-white font-sans" style="line-height: 1.3;">
+          Bridgin Innovation
+        </p>
+      </div>
+    </section>
+     <section id="about-link" class="section2"  style="height:520px;">
+            <div style="position: relative">
+              <div
+                class="ellips22"
+                style="
+                  top: 80px;
+                  right: 0;
+                  height: 240px;
+                  width: 500px;
+                  width: 550;
+                  position: absolute;
+                  background: #86daa2;
+                  opacity: 50%;
+                  filter: blur(188px);
+                "
+              ></div>
+              <div class="about   ">
+                <div class="animation sm:pl-10 md:pl-20 mt-48 pl-28  absolute">
+                  <p class="p1 font-sans font-normal  leading-8 text-custom-green text-2xl max-w-max w-113 h-10  " href="#about">ABOUT</p>
+                  <div class=" md:inline-flex md:gap-2 lg:inline-block ">
+                    <p class=" md:text-4xl  p2 text-white max-w-max font-sans  font-bold from-neutral-700 lg:text-5xl">
+                    Your Trusted Partner In</p>
+                    <p class="md:text-4xl  p2 lg:mt-3 text-white max-w-max font-sans  font-bold from-neutral-700 lg:text-5xl">
+                    The Digital World
+                  </p>
+                </div>
+                <div class="sm:w-[70%] md:w-[80%] lg:w-[100%] xl:w-[100%] p-1">
+                  <p class="about-text mt-5 md:text-base sm:text-small lg:text-1xl  text-white font-sans">
+                    We are driven by a passion for technology and a commitment to
+                    excellence. <br class="md:hidden sm:hidden lg:block"/> With a deep understanding of the ever-evolving IT
+                    landscape, we deliver <br class="md:hidden sm:hidden lg:block" />innovative and customized solutions to help
+                    businesses harness the power <br  class="md:hidden sm:hidden lg:block" /> of technology and achieve their goals.
+                  </p>
+                </div>
+            </div>
+            <div class="animation  absolute md:bg-center sm:bg-center   xl:pl-24  2xl:pr-20 right-0" style="margin-top: -100px;"  id="animation" 
+            >
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player class="sm:mr-16 lg:mt-0 xl:mt-0 2xl:mt-0 xl:pl-36 lg:pl-80 md:mt-80 md:pl-20 sm:mt-80 sm:pl-72  "  src="./animation.json"  background="transparent"  speed="1" style="width: 820px; height: 942px"   loop  autoplay></lottie-player>
+            
+
+            </div>
+
+          </section>
+
+      <section id="services-link" class="section3 md:mt-60 sm:mt-40 lg:mt-0" >
+        <div class="section-3 md:mt-40 sm:mt-40  mt-40  ">
+              <div class="mt-14 md:mt-96 sm:mt-96 lg:mt-0 text-center ">
+                  <p class="font-sans font-normal  leading-8 text-custom-green text-2xl uppercase">
+                      SERVICES
+                  </p>
+
+                  <p class=" text-white max-w-max font-sans inline-block  font-bold from-neutral-700 text-5xl mt-2 ">
+                      What We Do
+                  </p>
+              </div>
+              <div class="sm:mt-28 md:mt-5 md:pl-24 lg:mt-7 sm:pl-10 sm:w-full lg:pl-0 md:inline-table md:w-full lg:flex   gap-3 justify-center">
+
+                  <div class="  sm:h-60 md:pl-8  md:mt-12 sm:pl-6  sm:w-[95%]  md:w-[90%] md:h-52 lg:h-72 lg:ml-16  lg:w-1/4 bg-gray-900">
+                    <div class="md:pt-7 sm:pt-7 mt-1 ">
+                      <img src="images/rectangle-1.svg" class="w-12 h-10"  />
+                      <p class="
+                       font-bold  text-white mt-6 font-sans "> Web & Mobile App <br class="sm:hidden md:hidden lg:block" /> Development</p>
+                      <article class="pt-6  md:text-base md:mt-4 lg:mt-0      
+                      lg:text-base text-white  font-sans">We create exceptional digital<br class="md:hidden lg:block" /> experiences for web and mobile<br class="md:hidden lg:block" /> platforms.</article>
+                    </div>
+                    </div>
+
+                  <div class="  sm:h-60 sm:mt-10 md:pl-8 md:mt-12 sm:pl-6 sm:w-[95%] md:w-[90%] md:h-52 lg:h-72  lg:w-1/4 bg-gray-900">
+                    <div class="md:pt-7 sm:pt-7 mt-1">
+                      <img src="images/rectangle-2.svg" class="w-10 h-10" />
+                      <p class="font-bold text-white mt-6 font-sans"> Business Analytics &<br class="sm:hidden md:hidden lg:hidden xl:block " /> Technical <br class="sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden"/> Spec. Writing</p>
+                      <article class="pt-6 md:text-base md:mt-4 lg:mt-0 lg:text-base text-white font-sans"
+                      >We deliver data-driven insights<br class=" md:hidden lg:hidden xl:block " /> and precise documentation for<br class="md:hidden lg:block" /> successful software development.</article>
+                    </div>
+                    </div>
+
+                  <div  class="sm:h-60 sm:mt-10 md:pl-8 md:mt-12 sm:pl-6 sm:w-[95%] md:w-[90%] md:h-52 lg:h-72 lg:w-1/4 bg-gray-900"
+                  >
+                    <div class="md:pt-7 sm:pt-7 mt-1">
+                      <img src="Images/rectangle-3.svg" class="w-12 h-10">
+                      <p class="font-bold text-white mt-6 font-sans" > GIS & Map Powered App<br class=" md:hidden lg:block" /> Development</p>
+                      <article class="pt-6 md:text-base md:mt-4 lg:mt-0 lg:text-base text-white font-sans">We create GIS-powered apps that <br class="sm:hidden md:hidden lg:hidden xl:block" /> redefine location-based <br class="md:hidden lg:block"/>experiences.</article>
+                    </div>
+                    </div>
+
+                  <div class="sm:h-60 sm:mt-10 md:pl-8 md:mt-12 sm:pl-6 sm:w-[95%] md:w-[90%] md:h-52 lg:h-72 lg:mr-16 lg:w-1/4 bg-gray-900"
+                  >
+                    <div  class="md:pt-7 sm:pt-7 mt-1">
+                      <img src="Images/rectangle-4.svg" class="w-12 h-10" />
+                      <p class="font-bold text-white mt-6 font-sans">UI/UX Design</p>
+                      <article   class="pt-12 md:text-base  lg:mt-0 lg:text-base text-white font-sans "
+                      > We build captivating and user-<br class="sm:hidden md:hidden lg:block"/>centric interfaces for<br class="md:hidden lg:block" /> unforgettable experiences.</article>
+                    </div>
+                    </div>
+              </div>
+        </div>
+      </section>
+    
+      <section id="projects-link" class="section4 md:mt-40 mt-40">
+        <div class=" mx-auto" style="height:520px;">
+          <div class="text-center">
+              <p class=" font-sans mr-1 font-normal  leading-8 text-custom-green text-2xl uppercase ">
+                  PROJECTS
+              </p>
+              <p class="text-white max-w-max font-sans inline-block mt-2  font-bold from-neutral-700 text-5xl">
+                  Our Works
+              </p>
+          </div>
+          <div class=" md:pl-24 md:inline-table md:w-full sm:pl-24 sm:inline-table sm:w-full lg:pl-0 lg:grid  ">
+          <div class="lg:flex mt-16  gap-5 lg:justify-center  md:w-full  sm:w-full ">
+            <div class=" lg:ml-16
+             p-8 w-72 lg:h-72 md:h-64 xl:h-60 bg-gray-900  md:w-[90%] sm:w-[90%]" >
+              <img src="Images/works-p1.svg" class="w-12 h-10" />
+              <p class="font-bold text-white mt-6 font-sans  ">Police Operational Management Center Develoment  & Maintenance</p>
+              <article class="md:mt-12 lg:mt-6 font-normal text-white  font-sans">This is about management from emergency call to duty officers operations <br class="md:hidden lg:block" /> with real time  collaboration</article>
+          </div>
+      
+          <div class="mr-16 md:mt-12 lg:mt-0  sm:mt-12 p-8 w-72 lg:h-72 md:h-64 xl:h-60 bg-gray-900  md:w-[90%] sm:w-[90%]"  >
+              <img src="Images/works-p2.svg" class="w-12 h-10 " />
+              <p class="font-bold text-white mt-6 font-sans ">EcoIntellect Portal</p>
+              <article class="font-normal text-white lg:mt-6 font-sans articleprojects "> Educational platform to learn about ecology and to help keep our   <br class="md:hidden lg:block" /> environment  clean and healthy with gamification elements</article>
+          </div>
+        </div>
+        </div>
+      </div>
+     
+      </section>
+      <section id="contactus-link" class="section5 sm:mt-60 md:mt-60 lg:mt-5">
+        <div class="section-5 mx-auto">
+          <div class="text-center">
+              <p class=" font-sans font-normal  leading-8 text-custom-green text-2xl uppercase">
+                  CONTACT US
+              </p>
+              <p class="text-white max-w-max font-sans inline-block mt-2  font-bold from-neutral-700 text-5xl">
+                 Get In Touch
+              </p>
+          </div>
+          <div class="flex mt-16 gap-5 justify-evenly sm:w-full md:w-full lg:w-full  w-64 h-80 lg:bg-gray-900 ">
+            <div class="circle-background mt-24 w-20 h-20 bg-blue-400 bg-opacity-20 rounded-full">
+                <img src="Images/Address.svg" class="contactus1 p-4" alt="Address Icon">
+                <p class="font-normal lg:mt-4 text-center  text-custom-green  font-sans">ADDRESS</p>
+                <div class="lg:mt-2">
+                    <p class="text-centermt-4 lg:mt-2 w-max relative right-3 text-white">Tigran Mets 80</p>
+                </div>
+            </div>
+            <div class="circle-background mt-24 w-20 h-20 bg-blue-400 bg-opacity-20 rounded-full">
+                <img src="images/Phone.svg" class="phonesvg p-4" alt="Phone Icon">
+                <p class="text-center lg:mt-4  text-custom-green">PHONE</p>
+                <div class="lg:mt-2">
+                    <p class="text-center  w-max  relative right-6 text-white">+374 (94) 763 304</p>
+                </div>
+            </div>
+            <div class="circle-background mt-24 w-20 h-20 bg-blue-400 bg-opacity-20 rounded-full">
+                <img src="images/Email.svg" class="emailsvg p-4" alt="Email Icon">
+                <p class="text-center  lg:mt-4  text-custom-green">EMAIL</p>
+                <div class="w-max h-14 lg:mt-2">
+                    <img src="images/Vector (2).svg" class="emailiksvg w-auto  pt-1 relative right-7" alt="Email Icon">
+                </div>
+            </div>
+          </div>
+       </div>
+      </section>
+
+ 
+      <section id="vacancies-link" class="section6   mx-auto">
+        <div class="text-center mt-32" >
+          <p class="font-sans font-normal  leading-8 text-custom-green text-2xl uppercase">Vacancies</p>
+          <p class="text-white max-w-max font-sans inline-block  font-bold from-neutral-700 text-5xl mt-2">Join Our Team</p>
+          <p class="text-white mt-8">We value a diverse and talented workforce. We seek individuals who possess a <br />
+            combination of technical expertise, professional experience, and personal qualities <br />
+            that align with our company values. Please send your resume to </p>
+          </p>
+          <div class="w-max h-14 text-center inline-block mt-6">
+            <img src="images/ArIntellect.svg " class="emailiksvg w-auto  pt-1 " alt="Email Icon">
+        </div>
+        </div>
+      </section>
+      <section class="section6" style="height:300px;">
+        <footer class="mt-56">
+          <div class=" grid grid-cols-4  gap-16 h-64 flex-col md:flex-row md:justify-evenly md:items-start">
+            <div class="text-xl font-[Poppins] flex pl-20   cursor-pointer">
+              <img class="logoFirst  inline sm:mb-48" src="Images/ArIntellectLogo.svg"/>
+              <p class="text-base pl-2.5  text-white inline-flex md:pr-2 mt-4 font-sans">ArIntellect</p>
+            </div>
+            <div class=" max-h-full md:hidden sm:hidden lg:block "> 
+              <p class="text-white font-sans  font-bold">Company</p>
+              <p class="text-white font-sans mt-6 text-normal">About</p>
+              <p class="text-white font-sans mt-6 text-normal">Services</p>
+              <p class="text-white font-sans mt-6 text-normal">Contacts</p>
+            </div>
+            <div class=" max-h-full md:hidden sm:hidden lg:block"> 
+              <p class="text-white font-sans font-bold">Office</p>
+              <p class="text-white font-sans mt-6 text-normal">Address: Tigran Mets 80 </p>
+              <p class="text-white font-sans mt-6 text-normal">Phone: +374 (00) 000 000 </p>
+              <p class="text-white font-sans mt-6 text-normal" >Email: <img src="Images/emailik.svg" style="display: inline;"/></p>
+            </div>
+            <div class="pr-20 max-h-full md:hidden sm:hidden lg:block "> 
+              <p class="text-white font-sans  font-bold">Follow</p>
+              <p class="text-white font-sans mt-6 text-normal">Facebook</p>
+              <p class="text-white font-sans mt-6 text-normal">Linkedin</p>
+              <p class="text-white font-sans mt-6 text-normal">Twitter</p>
+            </div>
+
+            <div class="md:mt-20 sm:mt-20 md:pl-20 sm:pl-20 md:grid md:justify-start md:absolute sm:grid sm:justify-start sm:absolute md:w-full sm:w-full">
+              <div class="dropdown lg:hidden md:block sm:block">
+                <p class="text-white font-sans font-bold">Company</p>
+                <button onclick="openCompany()" class="absolute right-6 dropdown-toggle text-white font-sans font-bold"><img id="arrowcompany" src="Images/chevron-down.svg"></button>
+                <div id="company-dropdown" class="dropdown-menu hidden">
+                  <p class="text-white font-sans mt-6 text-normal">About</p>
+                  <p class="text-white font-sans mt-6 text-normal">Services</p>
+                  <p class="text-white font-sans mt-6 text-normal">Contacts</p>
+                </div>
+              </div>
+              
+              
+              <div class="dropdown lg:hidden md:block sm:block">
+                <p class="text-white font-sans font-bold">Office</p>
+                <button onclick="openOffice()" class="absolute right-6 dropdown-toggle text-white font-sans font-bold"><img id="arrowoffice" src="Images/chevron-down.svg"></button>
+                <div id="office-dropdown" class="dropdown-menu hidden">
+                  <p class="text-white font-sans mt-6 text-normal">Address: Tigran Mets 80</p>
+                  <p class="text-white font-sans mt-6 text-normal">Phone: +374 (00) 000 000</p>
+                  <p class="text-white font-sans mt-6 text-normal">Email: <img src="Images/emailik.svg" style="display: inline;" /></p>
+                </div>
+              </div>
+              
+              <div class="dropdown lg:hidden md:block sm:block">
+                <p class="text-white font-sans font-bold">Follow</p>
+                <button  onclick="openFollow()"  class="absolute right-6 dropdown-toggle text-white font-sans font-bold"><img id="arrowfollow" src="Images/chevron-down.svg"></button>
+                <div id="follow-dropdown" class="dropdown-menu hidden">
+                  <a href="" target="_blank"  class="text-white font-sans mt-6 text-normal">Facebook</a>
+                  <a href="" target="_blank"  class="text-white font-sans mt-6 text-normal">Linkedin</a>
+                  <a href="" target="_blank"  class="text-white font-sans mt-6 text-normal">Twitter</a>
+                </div>
+              </div>
+            </div>
+            
+      </footer>
+      
+      </section>
+
+      <div id="footertext" class="text-white font-sans text-center mt-52">
+        &copy;2023 ArIntellect. All Rights Reserved
+    </div>
   </body>
 </html>
+<script>
+var rotationStateCompany = 0;
+
+function openCompany() {
+  var footertext = document.getElementById("footertext");
+  footertext.style.marginTop = "70px";
+  var companydropdown = document.getElementById("company-dropdown");
+  companydropdown.classList.toggle('hidden');
+  
+  var arrowcompany = document.getElementById("arrowcompany");
+  
+  if (rotationStateCompany === 0) {
+    arrowcompany.style.transform = 'rotate(180deg)';
+    rotationStateCompany = 1;
+  } else {
+    arrowcompany.style.transform = 'rotate(360deg)';
+    rotationStateCompany = 0;
+  }
+};
+var rotationStateOffice = 0;
+
+function openOffice() {
+  var footertext = document.getElementById("footertext");
+  footertext.style.top = "50px";
+
+  var officedropdown = document.getElementById("office-dropdown");
+  officedropdown.classList.toggle('hidden');
+  
+  var arrowoffice = document.getElementById("arrowoffice");
+  
+  if (rotationStateOffice === 0) {
+    arrowoffice.style.transform = 'rotate(180deg)';
+    rotationStateOffice = 1;
+  } else {
+    arrowoffice.style.transform = 'rotate(360deg)';
+    rotationStateOffice = 0;
+  }
+};
+var rotationStateFollow = 0;
+
+function openFollow() {
+  var footertext = document.getElementById("footertext");
+  footertext.style.top = "50px";
+
+  var followdropdown = document.getElementById("follow-dropdown");
+  followdropdown.classList.toggle('hidden');
+  
+  var arrowfollow = document.getElementById("arrowfollow");
+    
+  if (rotationStateFollow === 0) {
+      arrowfollow.style.transform = 'rotate(180deg)';
+      rotationStateFollow = 1;
+  }
+  else {
+      arrowfollow.style.transform = 'rotate(360deg)';
+      rotationStateFollow = 0;
+  }
+};
+
+
+function menu(e) {
+  var mediaQuery = window.matchMedia("(max-width: 1023px)");
+    if (mediaQuery.matches) {
+          var ulElement = document.querySelector(".ul");
+          ulElement.style.height = "2328px";
+          ulElement.style.marginTop = "2404px";
+          ulElement.style.textAlign = "center";
+    }
+
+let list = document.querySelector("ul");
+    e.name === "menu-outline"
+    ? ((e.name = "close"),
+    list.classList.add("top-[80px]"),
+    list.classList.add("opacity-100"))
+    : (e.name = "menu-outline"),
+    list.classList.remove("top-[80px]"),
+    list.classList.remove("opacity-0");
+    
+    if (list.style.display === "block") {
+      list.style.display = "none";
+    }
+    else {
+      list.style.display = "block";
+    }
+}
+
+var links = document.getElementsByClassName("header-link");
+
+Array.from(links).forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    var menu = document.getElementById('menu-outline');
+    menu.name = "menu-outline";
+
+    var section = document.getElementById(
+      this.getAttribute("href").substring(1)
+    );
+
+    if (section) {
+      var w = window.innerWidth;
+      if (w <= 1023) {
+        var ul = document.getElementById("ul");
+        ul.style.display = "none";
+      }
+
+      var marginTop = 110; // Margin top value in pixels
+      var scrollPosition = section.offsetTop - marginTop;
+
+      var scrollOptions = {
+        top: scrollPosition,
+        behavior: "smooth",
+        duration: 600 // Duration in milliseconds (0.6 seconds)
+      };
+
+      smoothScrollTo(scrollOptions);
+    }
+  });
+});
+
+function smoothScrollTo(options) {
+  var start = window.pageYOffset || document.documentElement.scrollTop;
+  var startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+  var duration = options.duration;
+  var end = options.top;
+
+  var easeInOutCubic = function (t) {
+    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+  };
+
+  var scroll = function () {
+    var currentTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+    var time = Math.min(1, ((currentTime - startTime) / duration));
+    var timeFunction = easeInOutCubic(time);
+
+    window.scrollTo(0, Math.ceil((timeFunction * (end - start)) + start));
+
+    if (time < 1) {
+      requestAnimationFrame(scroll);
+    }
+  };
+
+  scroll();
+}
+</script>
+    
+<style>
+    .contactusbutton {
+      background: linear-gradient(
+        97.73deg,
+        #86daa2 0%,
+        #77c4a0 33.33%,
+        #54949b 66.67%,
+        #396d97 100%
+      );
+      white-space: nowrap;
+  
+      inline-size: max-content;
+      border-radius: 6px;
+    }
+  
+    .html{
+      overflow-y: scroll;
+    }
+    @media (min-width: 1024px) and (max-width: 1299px) {
+  .articleprojects {
+    margin-top: 44px;
+  }
+}
+
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-left-to-right {
+  animation: leftToRight 1.8s ease-in-out;
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-right-to-left {
+  animation: rightToLeft 1.2s ease-in-out;
+}
+/* .animation {
+  position: absolute;
+  top: 0;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    top: 1000px;
+  }
+  100% {
+    top: 0;
+  }
+} */
+
+</style>
+  
